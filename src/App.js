@@ -6,6 +6,9 @@ import Login from './Components/Login/Login';
 class App extends Component {
   constructor(){
     super();
+    this.state = {
+      user: {},
+    };
   }
 
   render() {
