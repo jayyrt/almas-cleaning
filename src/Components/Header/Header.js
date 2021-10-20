@@ -10,7 +10,6 @@ export default class Header extends Component {
         return (
             <div className="header">
                 <div className="title">Alma's Cleaning Company</div>
-                <img className="logo" src=""/>
             </div>
         )
     }
