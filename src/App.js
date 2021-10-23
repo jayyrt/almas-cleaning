@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
-import './App.css';
-import Header from './Components/Header/Header';
+import { HashRouter, Switch, Route } from 'react-router-dom';
 import Login from './Components/Login/Login';
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      user: {},
-    };
-  }
-
   render() {
     return (
-      <div className="App">
-      <Header />
-      <Login />
-      </div>
-    )
+     <HashRouter>
+       <Switch>
+        <Route path='/' component={Login} exact />
+       </Switch>
+     </HashRouter>
+    );
   }
 }
 

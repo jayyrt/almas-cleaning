@@ -4,7 +4,7 @@ const session = require('express-session');
 const massive = require('massive');
 const authCtrl = require('./controllers/authControllers');
 
-const PORT = 4000;
+const PORT = 3001;
 
 const app = express();
 
@@ -28,6 +28,8 @@ app.use(
     })
 );
 
-app.post('/auth/register', authCtrl.register)
+app.post('/auth/register', authCtrl.register);
+app.post('/auth/login', authCtrl.login);
+app.get('/auth/logout', authCtrl.logout);
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
