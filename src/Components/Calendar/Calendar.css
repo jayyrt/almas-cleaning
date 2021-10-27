@@ -1,0 +1,22 @@
+.header{
+    height: 10vh;
+    padding: 8px 40px 8px 40px;
+    display: flex;
+    background: black;
+    opacity: .8;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    font-family: cursive;
+    font-size: 30px;
+    color: rgb(81, 89, 202);
+}
+
+.logo {
+    display: flex;
+    height: 10vh;
+    width: 10vh;
+    
+}
