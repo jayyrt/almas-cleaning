@@ -3,12 +3,13 @@ import axios from 'axios';
 import './Login.css';
 
 export default class Login extends Component {
-    constructor(props){
-        super(props);
+    constructor(){
+        super();
         this.state = {
             username: '',
             password: '',
         };
+        this.login = this.login.bind(this);
     }
 
 //    handleUserInput(value) {
@@ -19,54 +20,24 @@ export default class Login extends Component {
 //        this.setState({ password: value });
 //    }
     
-    async componentDidMount() {
-        let res = await axios.get()
-    }
-
     register() {
-        const { username, password } = this.state;
-        axios
-        .post('/auth/register', { username, password })
-        .then(user => {
-            this.setState({ username: '', password: '' });
-            this.props.updateUser(user.data);
-        })
-        .catch(err => {
-            this.setState({ username: '', password: '' });
-            alert(err.response.request.response);
-        });
+        
     }
 
-//    login() {
-//        const { username, password } = this.state;
-//        axios
-//        .post('/auth/login', { username, password })
-//        .then(user => {
-//            this.setState({ username: '', password: '' });
-//            this.props.updateUser(user.data);
-//        })
-//        .catch(err => {
-//            this.setState({ username: '', password: '' });
-//            alert(err.response.request.response);
-//        });
-//    }
+    login() {
+        // if (e) e.preventDefault();
+        const { username, password } = this.state;
+        axios.post('/auth/login', { username, password })
+        .then()
+        .catch(err => console.log(err))
+    }
 
-        async login(e) {
-            if (e) e.preventDefault();
-            const { username, password } = this.state;
-            try {
-                const res = await axios.post('/auth/login', { username, password });
-                if (res.data.loggedIn) this.props.history.push('/my-calendar');
-            } catch (e) {
-                alert('Login failed. Please try again.');
-            }
-        }
 
     render() {
         const { username, password } = this.state;
         return (
             <div>
-                <form className='login-form' onSubmit={(e) => this.login(e)}>
+               {/* <form className='login-form' onSubmit={(e) => this.login(e)}> */}
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             </h1>
@@ -90,7 +61,7 @@ export default class Login extends Component {
                         </div>
                     </div>
                 </div>
-                </form>
+                {/* </form> */}
             </div>
         )
     }
