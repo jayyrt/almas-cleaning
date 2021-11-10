@@ -23,7 +23,8 @@ module.exports = {
         if(!user) {
             return res.status(401).send('User not found. Please register as a new user before logging in.')
         }
-        const isAuthenticated = password === user.hash;
+        const isAuthenticated = bcrypt.compareSync(password, user.hash); 
+        
         if(!isAuthenticated) {
             return res.status(403).send('Incorrect password');
         }

@@ -10,26 +10,28 @@ export default class Login extends Component {
             password: '',
         };
         this.login = this.login.bind(this);
+        this.register = this.register.bind(this);
     }
-
-//    handleUserInput(value) {
-//        this.setState({ username: value });
-//    }
-
-//    handlePasswordInput(value) {
-//        this.setState({ password: value });
-//    }
     
     register() {
-        
+        const { username, password } = this.state;
+        axios.post('/auth/register', { username, password })
+        .then(calendar => {
+            this.setState({ username: '', password: '' });
+//            this.props.history.push('/my-calendar', { username, password })
+            this.props.updateUser(calendar.data);
+        })
+        .catch(err => console.log(err));        
     }
 
     login() {
-        // if (e) e.preventDefault();
         const { username, password } = this.state;
         axios.post('/auth/login', { username, password })
-        .then()
-        .catch(err => console.log(err))
+        .then(calendar => {
+            this.props.history.push('/my-calendar', { username, password })
+            this.props.updateUser(calendar.data)
+        })
+        .catch(err => console.log(err));
     }
 
 
@@ -37,7 +39,6 @@ export default class Login extends Component {
         const { username, password } = this.state;
         return (
             <div>
-               {/* <form className='login-form' onSubmit={(e) => this.login(e)}> */}
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             </h1>
@@ -61,7 +62,6 @@ export default class Login extends Component {
                         </div>
                     </div>
                 </div>
-                {/* </form> */}
             </div>
         )
     }

@@ -5,19 +5,20 @@ import './Calendar.css';
 export default class Calendar extends Component {
     constructor(){
         super();
-        this.logout = this.logout.bind(this);       
+        this.logout = this.logout.bind(this);     
     }
 
     logout() {
-        axios
-        .get('/auth/logout')
-        .then(() => {
-            this.props.updateUser({});
-        })
-        .catch(err => console.log(err));
+         axios.get('/auth/logout',)
+         .then(user => {
+             this.props.history.push('/#')
+             this.props.updateUser(user);
+         })
+         .catch(err => console.log(err))
     }
 
     render(){
+        // const { username, password } = this.state;
         return(
         <div>
             <h1 className="header">
