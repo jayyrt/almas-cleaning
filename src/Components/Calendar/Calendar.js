@@ -5,6 +5,10 @@ import './Calendar.css';
 export default class Calendar extends Component {
     constructor(){
         super();
+        this.state = {
+            username: '',
+            password: '',
+        }
         this.logout = this.logout.bind(this);     
     }
 
@@ -18,14 +22,15 @@ export default class Calendar extends Component {
     }
 
     render(){
-        // const { username, password } = this.state;
+        const { username } = this.state;
         return(
         <div>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
+                <span className="user-tab">{username.user}</span>
                 <button className="buttons" onClick={this.logout}>Log Out</button>
             </h1>
-            <div>
+            <div className="weekly-container">
                 <div className="mon-container">Monday</div>
                 <div className="tues-container">Tuesday</div>
                 <div className="wed-container">Wednesday</div>

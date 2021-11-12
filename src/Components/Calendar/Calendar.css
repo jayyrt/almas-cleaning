@@ -5,12 +5,14 @@
     background: black;
     opacity: .8;
     align-items: center;
+    justify-content: space-between;
 }
 
 .title {
     display: flex;
     font-family: cursive;
     font-size: 30px;
+    /* padding: 8px; */
     color: rgb(81, 89, 202);
 }
 
@@ -19,4 +21,61 @@
     height: 10vh;
     width: 10vh;
     
+}
+
+.weekly-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 30px 40px 8px 40px;
+    border: solid black;
+    height: 80vh;
+}
+
+.mon-container {
+    display: flex;
+    border: solid black;
+    height: 70vh;
+    width: 30vh;
+    justify-content: space-around;
+}
+
+.tues-container {
+    display: flex;
+    border: solid black;
+    height: 70vh;
+    width: 30vh;
+    justify-content: space-around;
+}
+
+.wed-container {
+    display: flex;
+    border: solid black;
+    height: 70vh;
+    width: 30vh;
+    justify-content: space-around;
+}
+
+.thurs-container {
+    display: flex;
+    border: solid black;
+    height: 70vh;
+    width: 30vh;
+    justify-content: space-around;
+}
+
+.fri-container {
+    display: flex;
+    border: solid black;
+    height: 70vh;
+    width: 30vh;
+    justify-content: space-around;
+}
+
+.sat-container {
+    display: flex;
+    border: solid black;
+    height: 70vh;
+    width: 30vh;
+    justify-content: space-around;
 }

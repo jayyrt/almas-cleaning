@@ -24,12 +24,11 @@ module.exports = {
             return res.status(401).send('User not found. Please register as a new user before logging in.')
         }
         const isAuthenticated = bcrypt.compareSync(password, user.hash); 
-        
+
         if(!isAuthenticated) {
             return res.status(403).send('Incorrect password');
         }
         req.session.user = { id: user.id, username: user.username };
-        // return res.send(req.session.user);
         res.status(200).send(req.session.user);
     },
     logout: async (req, res) => {
