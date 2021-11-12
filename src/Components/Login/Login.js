@@ -34,7 +34,6 @@ export default class Login extends Component {
         .catch(err => console.log(err));
     }
 
-
     render() {
         const { username, password } = this.state;
         return (

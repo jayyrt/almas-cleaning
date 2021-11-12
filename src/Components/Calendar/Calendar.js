@@ -21,13 +21,17 @@ export default class Calendar extends Component {
          .catch(err => console.log(err))
     }
 
+    getUserInfo() {
+        
+    }
+
     render(){
         const { username } = this.state;
         return(
         <div>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
-                <span className="user-tab">{username.user}</span>
+                <span className="user-tab">username-here</span>
                 <button className="buttons" onClick={this.logout}>Log Out</button>
             </h1>
             <div className="weekly-container">

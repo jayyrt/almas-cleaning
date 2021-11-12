@@ -34,5 +34,8 @@ module.exports = {
     logout: async (req, res) => {
         req.session.destroy();
         res.redirect('http://localhost:3000')
+    },
+    userData: async (req, res) => {
+        
     }
 };

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import Login from './Components/Login/Login';
 import Calendar from './Components/Calendar/Calendar';
+import User from './Components/User/User';
 import './App.css';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
        <Switch>
         <Route path='/' component={Login} exact />
         <Route path='/my-calendar' component={Calendar} />
+        <Route path='/user-info' component={User} />
        </Switch>
      </HashRouter>
     );

@@ -43,7 +43,7 @@
 }
 
 .buttons {
-    width: 30vh;
+    width: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
