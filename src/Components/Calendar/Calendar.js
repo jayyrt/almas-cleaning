@@ -9,7 +9,8 @@ export default class Calendar extends Component {
             username: '',
             password: '',
         }
-        this.logout = this.logout.bind(this);     
+        this.logout = this.logout.bind(this);
+        this.getUserInfo = this.getUserInfo.bind(this);     
     }
 
     logout() {
@@ -31,12 +32,11 @@ export default class Calendar extends Component {
     }
 
     render(){
-        const { username } = this.state;
         return(
         <div>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
-                <div className="user-tab">{username.user}</div>
+                <button className="user-tab" onClick={this.getUserInfo}>Profile</button>
                 <button className="buttons" onClick={this.logout}>Log Out</button>
             </h1>
             <div className="weekly-container">

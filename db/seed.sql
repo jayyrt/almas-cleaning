@@ -31,3 +31,11 @@ VALUES
 ('Thursday', TRUE, TRUE, TRUE, TRUE),
 ('Friday', TRUE, TRUE, TRUE, TRUE),
 ('Saturday', TRUE, TRUE, TRUE, TRUE);
+
+CREATE TABLE user_info
+(
+id SERIAL PRIMARY KEY,
+name TEXT,
+address TEXT,
+phone_num INTEGER,
+);
