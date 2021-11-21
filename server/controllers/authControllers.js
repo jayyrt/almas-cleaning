@@ -35,10 +35,4 @@ module.exports = {
         req.session.destroy();
         res.redirect('http://localhost:3000')
     },
-    userData: async (req, res) => {
-         const { name, address, phonenum } = req.body;
-         const foundData = req.app.get('db').get_user_info([name, address, phone_num]);
-         const data = foundData[0];
-        
-    }
 };

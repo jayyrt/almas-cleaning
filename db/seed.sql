@@ -12,6 +12,16 @@ VALUES
 ('almaromero', 'chikis1973'),
 ('hectorlara', 'january31');
 
+CREATE TABLE user_info
+(
+userID INTEGER REFERENCES users(id),
+name TEXT,
+address VARCHAR(200),
+city VARCHAR(50),
+phone_num INTEGER
+);
+
+
 CREATE TABLE calendar
 (
 id SERIAL PRIMARY KEY,
@@ -32,10 +42,3 @@ VALUES
 ('Friday', TRUE, TRUE, TRUE, TRUE),
 ('Saturday', TRUE, TRUE, TRUE, TRUE);
 
-CREATE TABLE user_info
-(
-id SERIAL PRIMARY KEY,
-name TEXT,
-address TEXT,
-phone_num INTEGER,
-);

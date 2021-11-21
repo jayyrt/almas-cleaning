@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 import './User.css'
 
 export default class User extends Component {
-    constructor(){
-        super();
-    }
+        constructor(){
+            super();
+            this.state = {
+                name: '',
+                address: '',
+                phone: '',
+            };
+        }    
+
 
     render(){
         return (
@@ -20,6 +26,10 @@ export default class User extends Component {
                 <input className="addy-input"
                        type="text"
                        placeholder="Address"
+                />
+                <input className="city-input"
+                       type="text"
+                       placeholder="city"
                 />
                 <input className="phone-input"
                        type="text"
