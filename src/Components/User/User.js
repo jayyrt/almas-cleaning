@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import axios from 'axios';
 import './User.css'
 
 export default class User extends Component {
@@ -35,6 +36,7 @@ export default class User extends Component {
                        type="text"
                        placeholder="Phone Number"
                 />
+                <button className="buttons">Update</button>
                 </div>
             </div>
         )

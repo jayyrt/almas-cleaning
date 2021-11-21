@@ -18,7 +18,6 @@ export default class Login extends Component {
         axios.post('/auth/register', { username, password })
         .then(calendar => {
             this.setState({ username: '', password: '' });
-//            this.props.history.push('/my-calendar', { username, password })
             this.props.updateUser(calendar.data);
         })
         .catch(err => console.log(err));        

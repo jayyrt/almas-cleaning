@@ -1,3 +1,4 @@
+const bcrypt = require('bcryptjs');
 
 module.exports = {
     getInfo: async (req, res) => {
@@ -5,5 +6,6 @@ module.exports = {
        return res.status(200).send(info);       
     },
     addInfo: async (req, res) => {
+        
     },
 }

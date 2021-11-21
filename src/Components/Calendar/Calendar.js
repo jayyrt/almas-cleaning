@@ -23,12 +23,12 @@ export default class Calendar extends Component {
     }
 
     getUserInfo() {
-        const { username, password } = this.state;
-        axios.get('/api/user-info', { username, password })
+        axios.get('/api/user-info')
         .then(user => {
-            this.props.history.push('/user-info', { username, password });
+            this.props.history.push('/user-info');
             this.props.updateUser(user.data)
         })
+        .catch(err => console.log(err))
     }
 
     render(){
@@ -36,7 +36,7 @@ export default class Calendar extends Component {
         <div>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
-                <button className="user-tab" onClick={this.getUserInfo}>Profile</button>
+                <label className="user-tab" onClick={this.getUserInfo}>Profile</label>
                 <button className="buttons" onClick={this.logout}>Log Out</button>
             </h1>
             <div className="weekly-container">

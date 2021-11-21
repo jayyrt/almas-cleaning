@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const initialState = {
     hours: [],
-    loading: false
+    loading: false,
 }
 
 const REQUEST_CALENDAR_DATA = 'REQUEST_CALENDAR_DATA'
