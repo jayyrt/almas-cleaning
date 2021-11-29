@@ -8,6 +8,7 @@ export default class User extends Component {
             this.state = {
                 name: '',
                 address: '',
+                city: '',
                 phone: '',
             };
         }    

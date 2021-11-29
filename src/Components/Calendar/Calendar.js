@@ -1,42 +1,48 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import './Calendar.css';
+import { connect } from 'react-redux';
+import { requestUserData } from './../../Ducks/userReducer.js';
 
-export default class Calendar extends Component {
-    constructor(){
-        super();
-        this.state = {
-            username: '',
-            password: '',
-        }
-        this.logout = this.logout.bind(this);
-        this.getUserInfo = this.getUserInfo.bind(this);     
+class Calendar extends Component {
+    componentDidMount(){
+        this.props.requestUserData();
     }
 
-    logout() {
-         axios.get('/auth/logout')
-         .then(user => {
-             this.props.history.push('/#')
-             this.props.updateUser(user);
-         })
-         .catch(err => console.log(err))
-    }
+//        this.state = {
+//            username: '',
+//            password: '',
+        // }
+//        this.logout = this.logout.bind(this);
+//        this.getUserInfo = this.getUserInfo.bind(this);     
+    // }
 
-    getUserInfo() {
-        axios.get('/api/user-info')
-        .then(user => {
-            this.props.history.push('/user-info');
-            this.props.updateUser(user.data)
-        })
-        .catch(err => console.log(err))
-    }
+    // logout() {
+    //      axios.get('/auth/logout')
+    //      .then(user => {
+    //          this.props.history.push('/#')
+    //          this.props.updateUser(user);
+    //      })
+    //      .catch(err => console.log(err))
+    // }
+
+    // getUserInfo() {
+    //     const {username} = this.state;
+    //     axios.get('/api/user-info', {username})
+    //     .then(user => {
+    //         this.props.history.push('/user-info', {username});
+    //         this.props.updateUser(user.data)
+    //     })
+    //     .catch(err => console.log(err))
+    // }
 
     render(){
+        const { name, address, city, phone } = this.props.user;
         return(
         <div>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
-                <label className="user-tab" onClick={this.getUserInfo}>Profile</label>
+                <button className="user-tab" onClick={this.getUserInfo}>Profile</button>
                 <button className="buttons" onClick={this.logout}>Log Out</button>
             </h1>
             <div className="weekly-container">
@@ -51,3 +57,11 @@ export default class Calendar extends Component {
         )        
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user: state.user,
+    }
+}
+
+export default connect(mapStateToProps, { requestUserData })(Calendar);

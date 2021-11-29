@@ -21,6 +21,19 @@ city VARCHAR(50),
 phone_num INTEGER
 );
 
+ALTER TABLE user_info
+ALTER phone_num
+SET DATA TYPE VARCHAR(11);
+
+INSERT INTO user_info
+(userID, name, address, city, phone_num)
+VALUES
+(7, 'Kenia Romero', '270 N 500 W', 'Heber City', 8016513633);
+
+SELECT *
+FROM users
+JOIN user_info ON users.id = user_info.userID;
+
 
 CREATE TABLE calendar
 (
