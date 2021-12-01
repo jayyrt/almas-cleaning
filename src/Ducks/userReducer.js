@@ -1,10 +1,7 @@
 import axios from 'axios';
 
 const initialState = {
-    name: null,
-    address: null,
-    city: null,
-    phone: null,    
+  user : null,
 }
 
 const REQUEST_USER_DATA = 'REQUEST_USER_DATA'
@@ -19,11 +16,13 @@ export const requestUserData = () => {
 
 function reducer(state = initialState, action){
     switch(action.type){
-        case `${REQUEST_USER_DATA}_FULFILLED`:
-            const { name, address, city, phone } = action.payload.user
-            return { name, address, city, phone };
+        case REQUEST_USER_DATA:
+            return { 
+                ...state,
+                user: action.payload,
+            };
         default: {
-            return state;
+            return {...state};
         }
     }
 }

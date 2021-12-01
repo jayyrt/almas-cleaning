@@ -40,6 +40,7 @@
     background: black;
     color: white;
     opacity: .8;
+    font-family: cursive;
 }
 
 .buttons {
@@ -47,6 +48,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    font-family: cursive;
 }
 
 .header{
@@ -68,6 +70,5 @@
 .logo {
     display: flex;
     height: 10vh;
-    width: 10vh;
-    
+    width: 10vh;   
 }

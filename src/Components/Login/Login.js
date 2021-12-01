@@ -28,7 +28,7 @@ export default class Login extends Component {
         axios.post('/auth/login', { username, password })
         .then(calendar => {
             this.props.history.push('/my-calendar', { username, password })
-            this.props.updateUser(calendar.data)
+            // this.props.updateUser(calendar.data)
         })
         .catch(err => console.log(err));
     }
@@ -55,8 +55,8 @@ export default class Login extends Component {
                         onChange={(e) => this.setState({ password: e.target.value })}
                         />
                         <div className="buttons">
-                        <button onClick={this.login}>Login</button>
-                        <button onClick={this.register}>Register</button>
+                        <button className="buttons" onClick={this.login}>Login</button>
+                        <button className="buttons" onClick={this.register}>Register</button>
                         </div>
                     </div>
                 </div>

@@ -1,23 +1,25 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import './Calendar.css';
 import Logout from '../Shared/Logout.js';
 import { connect } from 'react-redux';
 import { requestUserData } from './../../Ducks/userReducer.js';
 
 class Calendar extends Component {
+    constructor(){
+        super();
+        this.state = {
+            username: '',
+            password: '',
+         }
+        this.getUser = this.getUser.bind(this);     
+    }
+ 
     componentDidMount(){
         this.props.requestUserData();
     };
-
-    //    this.state = {
-    //        username: '',
-    //        password: '',
-    //     }
-//        this.getUserInfo = this.getUserInfo.bind(this);     
-//    }
-
-    // getUserInfo() {
+        
+    // getUser() {
     //     const {username} = this.state;
     //     axios.get('/api/user-info', {username})
     //     .then(user => {
@@ -27,6 +29,10 @@ class Calendar extends Component {
     //     .catch(err => console.log(err))
     // }
 
+        getUser() {
+            this.props.history.push('/user-info')
+        }
+
     render(){
         // const { name, address, city, phone } = this.props.user;
         return(
@@ -34,7 +40,7 @@ class Calendar extends Component {
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
                 <div className="links">
-                <button className="link-content" onClick={this.getUserInfo}>Profile</button>
+                <button className="link-content" onClick={this.getUser}>Profile</button>
                 <Logout />
                 </div>
             </h1>

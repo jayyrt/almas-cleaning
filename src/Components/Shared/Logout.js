@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { withRouter } from 'react-router-dom';
 import './../Calendar/Calendar.css';
 
-export default class Logout extends Component {
-    constructor(props) {
-        super(props);
+class Logout extends Component {
+    constructor() {
+        super();
         this.state = {
             username: '',
             password: '',
@@ -16,8 +17,8 @@ export default class Logout extends Component {
     logout() {
          axios.get('/auth/logout')
          .then(user => {
-             this.props.history.push('/#')
-             this.props.updateUser(user);
+             this.props.history.push('/')
+            //  this.props.updateUser(user);
          })
          .catch(err => console.log(err))
     }
@@ -31,3 +32,5 @@ export default class Logout extends Component {
             )
     }
 }
+
+export default withRouter(Logout);

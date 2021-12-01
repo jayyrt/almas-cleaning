@@ -1,0 +1,31 @@
+.user-container {
+    background: transparent;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;  
+    justify-content: center;
+    flex-wrap: nowrap;
+    border: black solid 2px;
+    background: rgb(81, 89, 202);
+    opacity: .8;
+}
+
+.user-content {
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background: rgb(81, 89, 202);
+}
+
+.heading {
+    display: flex;
+    font-family: cursive;
+    font-size: 20px;
+}
