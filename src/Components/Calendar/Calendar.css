@@ -52,6 +52,8 @@
     padding: 30px 40px 8px 40px;
     border: solid black;
     height: 80vh;
+    background: rgb(81, 89, 202);
+    opacity: .8;
 }
 
 .mon-container {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
+import Background from './../Shared/Background/Background';
 import Logout from '../Shared/Logout.js';
 import './User.css'
 
@@ -15,13 +16,13 @@ export default class User extends Component {
         }
      
         updateUser(){
-            
+
         }
 
 
     render(){
         return (
-            <div>
+            <Background>
                 <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
                 <div className="links">        
@@ -53,7 +54,7 @@ export default class User extends Component {
                 <button className="buttons">Update</button>
                 </div>
             </div>
-            </div>
+            </Background>
         )
     }
 }

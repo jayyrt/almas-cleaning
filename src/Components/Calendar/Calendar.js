@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import './Calendar.css';
 import Logout from '../Shared/Logout.js';
+import Background from './../Shared/Background/Background';
 import { connect } from 'react-redux';
 import { requestUserData } from './../../Ducks/userReducer.js';
 
@@ -36,14 +37,14 @@ class Calendar extends Component {
     render(){
         // const { name, address, city, phone } = this.props.user;
         return(
-        <div>
+        <Background>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
                 <div className="links">
                 <button className="link-content" onClick={this.getUser}>Profile</button>
                 <Logout />
                 </div>
-            </h1>
+                </h1>
             <div className="weekly-container">
                 <div className="mon-container">Monday</div>
                 <div className="tues-container">Tuesday</div>
@@ -52,7 +53,7 @@ class Calendar extends Component {
                 <div className="fri-container">Friday</div>
                 <div className="sat-container">Saturday</div>
             </div>
-        </div>
+        </Background>
         )        
     }
 }

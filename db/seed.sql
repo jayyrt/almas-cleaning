@@ -18,7 +18,7 @@ userID INTEGER REFERENCES users(id),
 name TEXT,
 address VARCHAR(200),
 city VARCHAR(50),
-phone_num INTEGER
+phone_num INTEGER,
 );
 
 ALTER TABLE user_info
