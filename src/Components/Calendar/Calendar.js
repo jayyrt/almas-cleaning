@@ -1,30 +1,21 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import './Calendar.css';
+import Logout from '../Shared/Logout.js';
 import { connect } from 'react-redux';
 import { requestUserData } from './../../Ducks/userReducer.js';
 
 class Calendar extends Component {
     componentDidMount(){
         this.props.requestUserData();
-    }
+    };
 
-//        this.state = {
-//            username: '',
-//            password: '',
-        // }
-//        this.logout = this.logout.bind(this);
+    //    this.state = {
+    //        username: '',
+    //        password: '',
+    //     }
 //        this.getUserInfo = this.getUserInfo.bind(this);     
-    // }
-
-    // logout() {
-    //      axios.get('/auth/logout')
-    //      .then(user => {
-    //          this.props.history.push('/#')
-    //          this.props.updateUser(user);
-    //      })
-    //      .catch(err => console.log(err))
-    // }
+//    }
 
     // getUserInfo() {
     //     const {username} = this.state;
@@ -37,13 +28,15 @@ class Calendar extends Component {
     // }
 
     render(){
-        const { name, address, city, phone } = this.props.user;
+        // const { name, address, city, phone } = this.props.user;
         return(
         <div>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
-                <button className="user-tab" onClick={this.getUserInfo}>Profile</button>
-                <button className="buttons" onClick={this.logout}>Log Out</button>
+                <div className="links">
+                <button className="link-content" onClick={this.getUserInfo}>Profile</button>
+                <Logout />
+                </div>
             </h1>
             <div className="weekly-container">
                 <div className="mon-container">Monday</div>

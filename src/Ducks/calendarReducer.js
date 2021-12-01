@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const initialState = {
-    hours: [],
-    loading: false,
+    hours: null,
+    loading: null,
 }
 
 const REQUEST_CALENDAR_DATA = 'REQUEST_CALENDAR_DATA'
@@ -10,7 +10,7 @@ const ADD_HOUR = 'ADD_HOUR'
 const DELETE_HOUR = 'DELETE_HOUR'
 
 export const requestCalendarData = () => {
-
+    
 }
 
 export const addHour = () => {

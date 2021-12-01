@@ -4,7 +4,7 @@ import calendarReducer from './calendarReducer';
 import userReducer from './userReducer';
 
 const rootReducer = combineReducers({
-    calendar: calendarReducer,
+    calendar: null,
     user: userReducer,
 });
 

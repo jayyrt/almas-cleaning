@@ -1,3 +1,19 @@
+.links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-content{
+    width: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: transparent;
+    border: transparent;
+    color: rgb(81, 89, 202);
+}
+
 .header{
     height: 10vh;
     padding: 8px 40px 8px 40px;
