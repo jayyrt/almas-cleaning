@@ -24,7 +24,6 @@ class Logout extends Component {
     }
 
     render() {
-        //    const { username, password } = this.state;
             return(
                 <div>
                     <button className="link-content" onClick={this.logout}>Log Out</button>

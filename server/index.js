@@ -33,5 +33,6 @@ app.post('/auth/register', authCtrl.register);
 app.post('/auth/login', authCtrl.login);
 app.get('/auth/logout', authCtrl.logout);
 app.get('/auth/user-info', profileCtrl.getInfo);
+app.post('auth/user-info/')
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));

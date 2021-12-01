@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Background from './../Shared/Background/Background';
 import './Login.css';
 
 export default class Login extends Component {
@@ -36,7 +37,7 @@ export default class Login extends Component {
     render() {
         const { username, password } = this.state;
         return (
-            <div>
+            <Background>
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             </h1>
@@ -60,7 +61,7 @@ export default class Login extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
+            </Background>
         )
     }
 }
