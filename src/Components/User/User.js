@@ -12,7 +12,12 @@ export default class User extends Component {
                 address: '',
                 city: '',
                 phone: '',
-            };
+            }
+            this.getCalendar = this.getCalendar.bind(this);
+        }
+
+        getCalendar(){
+            this.props.history.push('/my-calendar');
         }
      
         updateUser(){
@@ -25,8 +30,11 @@ export default class User extends Component {
             <Background>
                 <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
+                <div className="links">
+                <button className="link-content" onClick={this.getCalendar}>Calendar</button>
                 <div className="links">        
                 <Logout />
+                </div>
                 </div>
             </h1>
             <div className="user-container">

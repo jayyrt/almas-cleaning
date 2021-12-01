@@ -31,7 +31,7 @@ class Calendar extends Component {
     // }
 
         getUser() {
-            this.props.history.push('/user-info')
+            this.props.history.push('/user-info');
         }
 
     render(){
