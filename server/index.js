@@ -29,12 +29,14 @@ app.use(
     })
 );
 
+//Auth Endpoints
 app.post('/auth/register', authCtrl.register);
 app.post('/auth/login', authCtrl.login);
 app.get('/auth/logout', authCtrl.logout);
 
-app.get('/auth/user-info', profileCtrl.getInfo);
+//Profile Endpoints
+app.get('/auth/user-info/:id', profileCtrl.getInfo);
 app.post('/auth/user-info/:id', profileCtrl.addInfo);
-app.post('auth/user-info/:id', profileCtrl.updateInfo);
+app.post('/auth/user-info/:id', profileCtrl.updateInfo);
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));

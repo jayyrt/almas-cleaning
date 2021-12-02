@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Background from './../Shared/Background/Background';
+import { ToastContainer, toast } from 'react-toastify';
 import './Login.css';
 
 export default class Login extends Component {
@@ -28,16 +29,19 @@ export default class Login extends Component {
         const { username, password } = this.state;
         axios.post('/auth/login', { username, password })
         .then(calendar => {
-            this.props.history.push('/my-calendar', { username, password })
+            this.props.history.push('/my-calendar', { username, password });
+            toast.success(`Welcome to your calendar`);
             // this.props.updateUser(calendar.data)
         })
-        .catch(err => console.log(err));
+        .catch((err) => toast.error(`Incorrect login information`));
     }
 
     render() {
         const { username, password } = this.state;
         return (
             <Background>
+                <ToastContainer />
+                
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             </h1>
