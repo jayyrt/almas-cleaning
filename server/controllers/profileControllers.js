@@ -13,6 +13,9 @@ module.exports = {
         return res.status(200).send(userInfo);
     },
     updateInfo: async (req, res) => {
-
+        const { userID } = req.session.user;
+        const { name, address, city, phone_num } = req.body;
+        const userInfo = await req.app.get('db').update_user([userID, name, address, city, phone_num]);
+        return res.status(200).send(userInfo);
     },
 }
