@@ -5,7 +5,7 @@ const initialState = {
 }
 
 const REQUEST_USER_DATA = 'REQUEST_USER_DATA'
-// const UPDATE_USER = 'UPDATE_USER'
+const UPDATE_USER = 'UPDATE_USER'
 
 export const requestUserData = () => {
     let data = axios.get('/auth/user-info/:id').then(res => res.data)
@@ -15,22 +15,22 @@ export const requestUserData = () => {
     }
 }
 
-// export const updateUser = (user) => {
-//     let data = axios.post('/auth/user-info/:id', { user }).then(res => res.data);
-//     return {
-//         type: UPDATE_USER,
-//         payload: data,
-//     }
-// }
+export const updateUser = (user) => {
+    let data = axios.post('/auth/user-info/:id', { user }).then(res => res.data);
+    return {
+        type: UPDATE_USER,
+        payload: data,
+    }
+}
 
 function reducer(state = initialState, action){
     switch(action.type){
-    //     case `UPDATE_USER`: {
-    //         return {
-    //             ...state,
-                
-    //         }
-        // }
+        case `UPDATE_USER`: {
+            return {
+                ...state,
+                user: action.payload,
+            }
+        }
         case REQUEST_USER_DATA:
             return { 
                 ...state,

@@ -30,3 +30,32 @@
     font-family: cursive;
     font-size: 20px;
 }
+
+.menu-button{
+    background-color: transparent;
+    cursor: pointer;
+    border: 2px solid gray;
+    border-radius: 7px;
+    color: gray;
+    display: none;
+    padding: 7px;
+}
+
+@media(max-width: 900px){
+    .header{
+        width: 80%;
+        background: transparent;
+    }
+    .title{
+        display: none;
+    }
+}
+
+@media(max-width: 600px){
+    .header{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }    
+}

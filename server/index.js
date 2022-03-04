@@ -1,11 +1,14 @@
 require('dotenv').config();
-const express = require('express')
+const express = require('express');
+const cors = require('cors');
 const session = require('express-session');
 const massive = require('massive');
 const authCtrl = require('./controllers/authControllers');
 const profileCtrl = require('./controllers/profileControllers')
 
 const PORT = 3001;
+
+app.use(cors());
 
 const app = express();
 

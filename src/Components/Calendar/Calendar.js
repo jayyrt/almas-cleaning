@@ -12,6 +12,7 @@ class Calendar extends Component {
         this.state = {
             username: '',
             password: '',
+            navLinks: ['']
          }
         this.getUser = this.getUser.bind(this);     
     }

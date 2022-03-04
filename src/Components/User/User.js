@@ -36,7 +36,7 @@ export default class User extends Component {
 
         }
      
-        updateUser(){
+        updateUser() {
 
         }
 

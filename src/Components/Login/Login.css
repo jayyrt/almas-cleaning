@@ -51,6 +51,10 @@
     font-family: cursive;
 }
 
+.buttons:hover{
+    color:white;
+}
+
 .header{
     height: 10vh;
     padding: 8px 40px 8px 40px;
