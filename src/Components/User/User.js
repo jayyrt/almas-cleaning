@@ -33,7 +33,7 @@ export default class User extends Component {
         }
 
         addUserInfo() {
-
+                
         }
      
         updateUser() {
@@ -42,6 +42,7 @@ export default class User extends Component {
 
 
     render(){
+        // const is a block scoped -- can not be updated! Find alternative
         const { name, address, city, phone_num } = this.state;
         return (
             <Background>

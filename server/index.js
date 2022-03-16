@@ -8,7 +8,7 @@ const profileCtrl = require('./controllers/profileControllers')
 
 const PORT = 3001;
 
-app.use(cors());
+// app.use(cors());
 
 const app = express();
 
