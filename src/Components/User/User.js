@@ -28,7 +28,7 @@ export default class User extends Component {
         getUser(){
             axios.get('/auth/user-info/:id')
             .then(res => {
-                this.setState({ ...res.data})
+                this.setState({ ...res.data}) 
             })
         }
 
@@ -50,7 +50,7 @@ export default class User extends Component {
                 <div className="title">Alma's Cleaning Company</div>
                 <div className="links">
                 <button className="link-content" onClick={this.getCalendar}>Calendar</button>
-                <div className="links">        
+                <div className="links">       
                 <Logout />
                 </div>
                 </div>

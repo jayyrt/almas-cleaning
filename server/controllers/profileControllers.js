@@ -2,9 +2,14 @@
 
 module.exports = {
     getInfo: async (req, res) => {
-       const { userID } = req.session.user;
-       const info = await req.app.get('db').get_user_info([userID]);
-       return res.status(200).send(info);       
+        try {
+            const { userID } = req.session.user;
+            const userInfo = await req.app.get('db').get_user_info([userID]); // does .params need to be used?
+            return res.status(200).send(userInfo);
+        } catch (e) {
+            console.log(e);
+            res.status(500).send('Displaying User Information Error');
+        }
     },
     addInfo: async (req, res) => {
         const { userID } = req.session.user;
