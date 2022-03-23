@@ -9,6 +9,7 @@ export default class Login extends Component {
         super();
         this.state = {
             username: '',
+            email: '',
             password: '',
         };
         this.login = this.login.bind(this);
@@ -16,10 +17,10 @@ export default class Login extends Component {
     }
     
     register() {
-        const { username, password } = this.state;
-        axios.post('/auth/register', { username, password })
+        const { username, email, password } = this.state;
+        axios.post('/auth/register', { username, email, password })
         .then(calendar => {
-            this.setState({ username: '', password: '' });
+            this.setState({ username: '', email: '', password: '' });
             this.props.updateUser(calendar.data);
         })
         .catch(err => console.log(err));        
@@ -37,7 +38,7 @@ export default class Login extends Component {
     }
 
     render() {
-        const { username, password } = this.state;
+        const { username, email, password } = this.state;
         return (
             <Background>
                 <ToastContainer />
@@ -52,6 +53,12 @@ export default class Login extends Component {
                         placeholder="Username"
                         value={username}
                         onChange={(e) => this.setState({ username: e.target.value })}
+                        />
+                        <input className="input-box"
+                        type="text"
+                        placeholder="Email"
+                        value={email}
+                        onChange={(e) => this.setState({ email: e.target.value })}
                         />
                         <input className="input-box"
                         type="password"

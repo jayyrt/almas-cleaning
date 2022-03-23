@@ -5,6 +5,9 @@ username VARCHAR(120),
 hash text
  );
 
+ALTER TABLE users
+ADD COLUMN email VARCHAR(60);
+
 INSERT INTO users
 (username, hash)
 VALUES
