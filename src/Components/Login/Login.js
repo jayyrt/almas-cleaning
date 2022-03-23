@@ -9,18 +9,18 @@ export default class Login extends Component {
         super();
         this.state = {
             username: '',
-            email: '',
             password: '',
+            email: '',
         };
         this.login = this.login.bind(this);
         this.register = this.register.bind(this);
     }
     
     register() {
-        const { username, email, password } = this.state;
-        axios.post('/auth/register', { username, email, password })
+        const { username, password, email } = this.state;
+        axios.post('/auth/register', { username, password, email })
         .then(calendar => {
-            this.setState({ username: '', email: '', password: '' });
+            this.setState({ username: '', password: '', email: '' });
             this.props.updateUser(calendar.data);
         })
         .catch(err => console.log(err));        
@@ -38,11 +38,11 @@ export default class Login extends Component {
     }
 
     render() {
-        const { username, email, password } = this.state;
+        const { username, password, email } = this.state;
         return (
             <Background>
                 <ToastContainer />
-                
+            
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             </h1>
