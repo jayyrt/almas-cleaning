@@ -1,7 +1,8 @@
 .user-container {
     background: transparent;
     height: 80vh;
-    width: auto;
+    width: 80%;
+    margin: auto;
     display: flex;
     align-items: center;
     align-content: center;

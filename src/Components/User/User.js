@@ -13,6 +13,7 @@ export default class User extends Component {
                city: '',
                phone_num: '',
             }
+            this.getUser = this.getUser.bind(this);
             this.getCalendar = this.getCalendar.bind(this);
             this.addUserInfo = this.addUserInfo.bind(this);
         }
