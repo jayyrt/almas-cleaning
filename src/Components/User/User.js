@@ -14,6 +14,7 @@ export default class User extends Component {
                phone_num: '',
             }
             this.getUser = this.getUser.bind(this);
+            this.updateUser = this.updateUser.bind(this);
             this.getCalendar = this.getCalendar.bind(this);
         }
 
@@ -33,7 +34,12 @@ export default class User extends Component {
         }
      
         updateUser() {
-
+            const { name, address, city, phone_num } = this.state;
+            axios.post('/auth/user-info/:id', { name, address, city, phone_num })
+            .then(userInfo => {
+                this.setState({ name: '', address: '', city: '', phone_num: '' });
+                this.props.updateUser(userInfo.data)
+            })
         }
 
 
