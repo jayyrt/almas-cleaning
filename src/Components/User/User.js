@@ -15,7 +15,6 @@ export default class User extends Component {
             }
             this.getUser = this.getUser.bind(this);
             this.getCalendar = this.getCalendar.bind(this);
-            this.addUserInfo = this.addUserInfo.bind(this);
         }
 
         componentDidMount(){
@@ -31,10 +30,6 @@ export default class User extends Component {
             .then(res => {
                 this.setState({ ...res.data}) 
             })
-        }
-
-        addUserInfo() {
-                
         }
      
         updateUser() {
@@ -85,7 +80,6 @@ export default class User extends Component {
                        onChange={(e) => this.setState({ phone_num: e.target.value })}
                        value={phone_num}
                 />
-                <button className="buttons" onClick={this.addUserInfo}>Add</button>
                 <button className="buttons" onClick={this.updateUser}>Update</button>
                 </div>
             </div>
