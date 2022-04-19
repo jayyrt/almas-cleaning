@@ -12,9 +12,9 @@ module.exports = {
     },
     updateInfo: async (req, res) => {
         try {
-            const { userID } = req.session.user;
+            const { userid } = req.session.user;
             const { name, address, city, phone_num } = req.body;
-            const userInfo = await req.app.get('db').update_user([userID, name, address, city, phone_num]);
+            const userInfo = await req.app.get('db').add_user_info([userid, name, address, city, phone_num]);
             return res.status(200).send(userInfo);
         } catch (e) {
             console.log(e);

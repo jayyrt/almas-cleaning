@@ -38,9 +38,12 @@ export default class User extends Component {
             axios.post('/auth/user-info/:id', { name, address, city, phone_num })
             .then(userInfo => {
                 this.setState({ name: '', address: '', city: '', phone_num: '' });
-                this.props.updateUser(userInfo.data)
+                this.props.history.push(userInfo.data)
             })
         }
+
+    // user information is being added to the database, but is not displaying on the front end
+    // required to limit to one addition per user!
 
 
     render(){
