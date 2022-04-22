@@ -47,7 +47,7 @@ export default class User extends Component {
 
 
     render(){
-        // const is a block scoped -- can not be updated! Find alternative
+        // const is a block scoped -- cannot be updated! Find alternative
         const { name, address, city, phone_num } = this.state;
         return (
             <Background>

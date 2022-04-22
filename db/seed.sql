@@ -17,11 +17,12 @@ VALUES
 
 CREATE TABLE user_info
 (
-userID INTEGER REFERENCES users(id),
+userid INTEGER REFERENCES users(id) NOT NULL,
 name TEXT,
 address VARCHAR(200),
 city VARCHAR(50),
-phone_num INTEGER,
+phone_num VARCHAR(10)
+CONSTRAINT chk_phone CHECK (phone_num NOT LIKE '%[^0-9]%')
 );
 
 ALTER TABLE user_info
@@ -29,7 +30,7 @@ ALTER phone_num
 SET DATA TYPE VARCHAR(11);
 
 INSERT INTO user_info
-(userID, name, address, city, phone_num)
+(userID, name, address, city, phone_num) 
 VALUES
 (7, 'Kenia Romero', '270 N 500 W', 'Heber City', 8016513633);
 

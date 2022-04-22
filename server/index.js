@@ -38,7 +38,7 @@ app.post('/auth/login', authCtrl.login);
 app.get('/auth/logout', authCtrl.logout);
 
 //Profile Endpoints
-app.get('/auth/user-info/:id', profileCtrl.getInfo);
-app.post('/auth/user-info/:id', profileCtrl.updateInfo);
+app.get('/auth/user-info/:id', authCtrl.usersOnly, profileCtrl.getInfo);
+app.post('/auth/user-info/:id', authCtrl.usersOnly, profileCtrl.updateInfo);
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));

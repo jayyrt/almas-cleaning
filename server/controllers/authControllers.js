@@ -35,4 +35,11 @@ module.exports = {
         req.session.destroy();
         res.redirect('http://localhost:3000')
     },
+    usersOnly: async (req, res, next) => {
+        if (!req.session.user) {
+            return res.status(401).send('Please log in');
+        }
+        next();
+    },
+    // add usersOnly to require login for creating calendar events -- reference breezy-paradise
 };
