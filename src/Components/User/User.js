@@ -8,6 +8,8 @@ export default class User extends Component {
         constructor(props){
             super(props);
             this.state = {
+            // add userid prop (how to insert) fix db NOT NULL error
+               userid: '',
                name: '',
                address: '',
                city: '',
@@ -34,10 +36,10 @@ export default class User extends Component {
         }
      
         updateUser() {
-            const { name, address, city, phone_num } = this.state;
-            axios.post('/auth/user-info/:id', { name, address, city, phone_num })
+            const { userid, name, address, city, phone_num } = this.state;
+            axios.post('/auth/user-info/:id', { userid, name, address, city, phone_num })
             .then(userInfo => {
-                this.setState({ name: '', address: '', city: '', phone_num: '' });
+                this.setState({ userid: '', name: '', address: '', city: '', phone_num: '' });
                 this.props.history.push(userInfo.data)
             })
         }
@@ -64,7 +66,10 @@ export default class User extends Component {
                 <div className="heading">
                     <h1>User Information</h1>
                 </div>
-                <div className="user-content">
+                <div className="user-content"> 
+
+                {/* how to add userid as key ?? */}
+
                 <input className="input-box"
                        type="text"
                        placeholder="First & Last Name"

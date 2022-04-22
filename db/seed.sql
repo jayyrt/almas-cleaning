@@ -25,10 +25,6 @@ phone_num VARCHAR(10)
 CONSTRAINT chk_phone CHECK (phone_num NOT LIKE '%[^0-9]%')
 );
 
-ALTER TABLE user_info
-ALTER phone_num
-SET DATA TYPE VARCHAR(11);
-
 INSERT INTO user_info
 (userID, name, address, city, phone_num) 
 VALUES
