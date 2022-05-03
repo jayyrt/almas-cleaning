@@ -1,0 +1,38 @@
+.service-container {
+    height: 150vh;
+    width: auto;
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background: rgb(81, 89, 202);
+    opacity: .8;
+    margin: auto;
+    padding: 8px 40px 8px 40px;
+}
+
+.about-container {
+    height: 50vh;
+    width: auto;
+    border: black solid 2px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    background: rgb(81, 89, 202);
+    opacity: .8;
+    margin: auto;
+    margin-top: 15px;
+    padding: 8px 40px 8px 40px;
+}
+.info-content{
+    border: transparent;
+    margin: auto;
+    padding: 8px 40px 8px 40px;
+    justify-content: space-around;
+};

@@ -26,11 +26,13 @@ export default class Services extends Component {
                         <button className="link-content" onClick={this.getLogin}>Login/Register</button>
                     </div>
                 </h1>
-                <div className='container'>
-                    Section 1
-                </div>
-                <div className='container'>
-                    About Company
+                <div className='info-content'>
+                    <div className='service-container'>
+                        <h2>Services</h2>
+                    </div>
+                    <div className='about-container'>
+                        <h2>About Company</h2>
+                    </div>
                 </div>
             </Background>
         );
