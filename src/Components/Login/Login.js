@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Background from './../Shared/Background/Background';
-// import Services from './Services';
 import { ToastContainer, toast } from 'react-toastify';
 import './Login.css';
 
