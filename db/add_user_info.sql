@@ -3,4 +3,5 @@ INSERT INTO user_info
 VALUES
 ($1, $2, $3, $4, $5)
 RETURNING *;
--- does the userID need to be included?
+-- userid need to be added into the table & used as a Join to recall information
+-- recall JOIN SQL report

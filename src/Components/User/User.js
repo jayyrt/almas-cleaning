@@ -53,7 +53,7 @@ export default class User extends Component {
         const { name, address, city, phone_num } = this.state;
         return (
             <Background>
-                <h1 className="header">
+            <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
                 <div className="links">
                 <button className="link-content" onClick={this.getCalendar}>Calendar</button>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Background from './../Shared/Background/Background';
+// import Services from './Services';
 import { ToastContainer, toast } from 'react-toastify';
 import './Login.css';
 
@@ -14,6 +15,7 @@ export default class Login extends Component {
         };
         this.login = this.login.bind(this);
         this.register = this.register.bind(this);
+        this.getServices = this.getServices.bind(this);
     }
     
     register() {
@@ -37,6 +39,10 @@ export default class Login extends Component {
         .catch((err) => toast.error(`Incorrect login information`));
     }
 
+    getServices() {
+        this.props.history.push('/services');
+    }
+
     render() {
         const { username, password, email } = this.state;
         return (
@@ -45,6 +51,9 @@ export default class Login extends Component {
             
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
+            <div className="links">
+                <button className="link-content" onClick={this.getServices}>Services</button>
+            </div>
             </h1>
                 <div className="login-container">
                     <div className="container">
