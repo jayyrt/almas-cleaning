@@ -6,7 +6,7 @@ const massive = require('massive');
 const authCtrl = require('./controllers/authControllers');
 const profileCtrl = require('./controllers/profileControllers')
 
-const PORT = 3001;
+const PORT = 3005;
 
 // app.use(cors());
 

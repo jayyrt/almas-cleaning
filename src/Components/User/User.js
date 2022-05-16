@@ -5,8 +5,8 @@ import Logout from '../Shared/Logout.js';
 import './User.css'
 
 export default class User extends Component {
-        constructor(props){
-            super(props);
+        constructor(){
+            super();
             this.state = {
             // add userid prop (how to insert) fix db NOT NULL error
                userid: '',
