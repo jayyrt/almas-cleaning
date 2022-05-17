@@ -35,6 +35,14 @@ module.exports = {
         req.session.destroy();
         res.redirect('http://localhost:3000')
     },
+    getUser: async (req, res) => {
+        const user = req.session.user;
+        if (user) {
+            res.status(200).send(user);
+        } else {
+            res.sendStatus(404);
+        }
+    },
     usersOnly: async (req, res, next) => {
         if (!req.session.user) {
             return res.status(401).send('Please log in');
