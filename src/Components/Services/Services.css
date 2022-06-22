@@ -10,8 +10,8 @@
     opacity: .9;
     margin: 10px 5% 10px 5%;
     padding: 8px 40px 8px 40px;
-    /* margin-top: 20px; */
-}
+    margin-top: 20px;
+} 
 
 .services {
     display: flex;

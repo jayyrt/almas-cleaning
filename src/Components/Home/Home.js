@@ -1,22 +1,49 @@
 import React, { Component } from 'react';
+import ReactModal from 'react-modal';
 import axios from 'axios';
-import Background from './../Shared/Background/Background';
+import Background from '../Shared/Background/Background';
 import { ToastContainer, toast } from 'react-toastify';
-import './Login.css';
+import './Home.css';
 
-export default class Login extends Component {
-    constructor(){
-        super();
+export default class Home extends Component {
+    constructor(props){
+        super(props);
         this.state = {
+            // USER STATES
             username: '',
             password: '',
             email: '',
+            // MODAL STATES
+            showSignInModal: false,
+            showRegisterModal: false,
         };
         this.login = this.login.bind(this);
         this.register = this.register.bind(this);
-        this.getServices = this.getServices.bind(this);
+        this.handleCloseSignInModal = this.handleCloseSignInModal.bind(this);
+        // this.getServices = this.getServices.bind(this);
     }
-    
+
+    handleOpenSignInModal(show) {
+        this.setState({showSignInModal: show});
+    };
+
+    handleCloseSignInModal() {
+        this.setState({username: '', password: '', showSignInModal: false});
+    };
+
+    modalFadeMilliseconds() {
+        const Milliseconds = 50;
+    }
+
+    // ADD handleOpenRegisterModal &&& handleCloseRegisterModal
+    handleOpenRegisterModal(){
+
+    };
+
+    handleCloseRegisterModal(){
+
+    };
+
     register() {
         const { username, password, email } = this.state;
         axios.post('/auth/register', { username, password, email })
@@ -38,9 +65,9 @@ export default class Login extends Component {
         .catch((err) => toast.error(`Incorrect login information`));
     }
 
-    getServices() {
-        this.props.history.push('/services');
-    }
+    // getServices() {
+    //     this.props.history.push('/services');
+    // }
 
     render() {
         const { username, password, email } = this.state;
@@ -51,9 +78,18 @@ export default class Login extends Component {
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             <div className="links">
-                <button className="link-content" onClick={this.getServices}>Services</button>
+                <button className="link-content" onClick={this.handleOpenSignInModal}>Sign In</button> 
+                {/* ERROR WHEN SEARCHING FOR props className={`sign-in ${props.username ? 'sign-in-hidden' : ''}`} */}
+                {/* <p className={`signed-in-user  ${props.username ? '' : 'sign-in-hidden'}`}>Welcome: {props.user.username}</p> */}
             </div>
             </h1>
+            <ReactModal
+                isOpen={this.handleOpenSignInModal}
+                contentLabel="Sign In Modal"
+                onRequestClose={this.handleCloseSignInModal}
+                closeTimeoutMS={this.modalFadeMilliseconds}
+                className="modal"
+            >
                 <div className="login-container">
                     <div className="container">
                         <input className="input-box"
@@ -77,9 +113,11 @@ export default class Login extends Component {
                         <div className="buttons">
                         <button className="buttons" onClick={this.login}>Login</button>
                         <button className="buttons" onClick={this.register}>Register</button>
+                        <button className="buttons" onClick={this.handleCloseSignInModal}>Cancel</button>
                         </div>
                     </div>
                 </div>
+                </ReactModal>
             </Background>
         )
     }
