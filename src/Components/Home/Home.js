@@ -5,9 +5,11 @@ import Background from '../Shared/Background/Background';
 import { ToastContainer, toast } from 'react-toastify';
 import './Home.css';
 
+ReactModal.setAppElement('#root');
+
 export default class Home extends Component {
-    constructor(props){
-        super(props);
+    constructor() {
+        super();
         this.state = {
             // USER STATES
             username: '',
@@ -20,15 +22,16 @@ export default class Home extends Component {
         this.login = this.login.bind(this);
         this.register = this.register.bind(this);
         this.handleCloseSignInModal = this.handleCloseSignInModal.bind(this);
+        this.handleOpenSignInModal = this.handleOpenSignInModal.bind(this);
         // this.getServices = this.getServices.bind(this);
     }
 
-    handleOpenSignInModal(show) {
-        this.setState({showSignInModal: show});
+    handleOpenSignInModal() {
+        this.setState({ showSignInModal: true });
     };
 
     handleCloseSignInModal() {
-        this.setState({username: '', password: '', showSignInModal: false});
+        this.setState({ username: '', password: '', showSignInModal: false });
     };
 
     modalFadeMilliseconds() {
@@ -70,7 +73,7 @@ export default class Home extends Component {
     // }
 
     render() {
-        const { username, password, email } = this.state;
+        const { username, password, email, showSignInModal } = this.state;
         return (
             <Background>
                 <ToastContainer />
@@ -84,7 +87,7 @@ export default class Home extends Component {
             </div>
             </h1>
             <ReactModal
-                isOpen={this.handleOpenSignInModal}
+                isOpen={showSignInModal}
                 contentLabel="Sign In Modal"
                 onRequestClose={this.handleCloseSignInModal}
                 closeTimeoutMS={this.modalFadeMilliseconds}
