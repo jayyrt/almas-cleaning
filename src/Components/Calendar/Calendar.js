@@ -15,7 +15,6 @@ class Calendar extends Component {
             navLinks: ['']
          }
         this.getUser = this.getUser.bind(this);
-        this.getServices = this.getServices.bind(this);     
     }
  
     componentDidMount(){
@@ -36,10 +35,6 @@ class Calendar extends Component {
             this.props.history.push('/user-info');
         }
 
-        getServices() {
-            this.props.history.push('/services');
-        }
-
     render(){
         // const { name, address, city, phone } = this.props.user;
         return(
@@ -48,7 +43,6 @@ class Calendar extends Component {
                 <div className="title">Alma's Cleaning Company</div>
                 <div className="links">
                 <button className="link-content" onClick={this.getUser}>Profile</button>
-                <button className="link-content" onClick={this.getServices}>Services</button>
                 <Logout />
                 </div>
                 </h1>

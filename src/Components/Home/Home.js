@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Services from '../Services/Services';
 import ReactModal from 'react-modal';
 import axios from 'axios';
 import Background from '../Shared/Background/Background';
@@ -121,6 +122,10 @@ export default class Home extends Component {
                     </div>
                 </div>
                 </ReactModal>
+
+                <Services />
+
+
             </Background>
         )
     }

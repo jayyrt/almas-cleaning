@@ -1,11 +1,11 @@
-.Login {
+/* .Login {
   background: url('https://www.teahub.io/photos/full/267-2677280_pin-peacock-feathers-galaxy-desktop-wallpaper-download-peacock.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
   text-align: center;
-}
+} */
 
 .login-container {
     background:transparent;
@@ -17,7 +17,25 @@
     flex-direction: column;  
     justify-content: center;
     flex-wrap: nowrap;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;   
+    padding: 20px;
 }
+
+  /* .modal {
+    height: 500px;
+    width: 400px;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #707070;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+  } */
 
 .container {
     height: 50vh;
@@ -31,16 +49,18 @@
     flex-wrap: nowrap;
     background: rgb(81, 89, 202);
     opacity: .8;
+    border-radius: 10px;
 }
 
 .input-box {
-    width: 35vh;
+    width: 20vh;
     height: 7vh;
     font-size: 16px;
     background: black;
     color: white;
     opacity: .8;
     font-family: cursive;
+    border-radius: 10px;
 }
 
 .buttons {
@@ -49,6 +69,10 @@
     flex-direction: row;
     justify-content: space-around;
     font-family: cursive;
+    color: black;
+    background: transparent;
+    border: none;
+    padding: 0px 10px 0px 10px;
 }
 
 .buttons:hover{
@@ -119,19 +143,6 @@
     display: flex;
   }
   
-  .modal {
-    height: 500px;
-    width: 400px;
-    position: relative;
-    top: 50px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #707070;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-  }
   
   .logo-link h5 {
     letter-spacing: 0.4em;

@@ -20,13 +20,6 @@ export default class Services extends Component {
     render() {
         return (
             <Background>
-                <h1 className="header">
-                    <div className="title">Alma's Cleaning Company</div>
-                    <div className="links">
-                        <button className="link-content" onClick={this.getLogin}>Login</button>
-                    </div>
-                </h1>
-
             <div>
                 <div className='info-content'>
                     <div className='service-container'>
