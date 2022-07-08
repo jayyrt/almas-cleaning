@@ -1,16 +1,18 @@
 .service-container {
     height: 80vh;
-    width: auto;
-    border: black solid 2px;
-    align-items: left;
-    align-content: left;
-    justify-content: flex-start;
+    width: 100%;
+    border: transparent;
+    align-items: center;
+    /* align-content: left; */
+    justify-content: center;
     flex-wrap: nowrap;
     background: rgb(81, 89, 202);
     opacity: .9;
-    margin: 10px 5% 10px 5%;
-    padding: 8px 40px 8px 40px;
+    /* margin: 10px 5% 10px 5%; */
+    padding: 2px 40px 2px 40px;
     /* margin-top: 20px; */
+    margin-left: 0%;
+    margin-right: 0%;
 } 
 
 .services {
@@ -24,7 +26,7 @@
 
 .img-container {
     height: 80vh;
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -32,7 +34,7 @@
 .adrian {
     display: flex;
     height: 80vh;
-    width: 200vh;
+    width: 100%;
     border: none;
     align-content: center;
     justify-content: center;
@@ -67,7 +69,7 @@ h2 {
 
 .info-content{
     border: transparent;
-    margin: auto;
+    /* margin: auto; */
     display: flex;
     align-items: center;
     align-content: center;
