@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Adrian from './Adrian.jpg';
 import Background from './../Shared/Background/Background';
 // import axios from 'axios';
 import './Services.css';
@@ -39,7 +40,10 @@ export default class Services extends Component {
                             </div>
                         </div>
                     </div>
-
+                    <div className='img-container'>
+                        <img className='adrian' src={Adrian} alt='Team Image' />
+                        {/* RESEARCH HOW TO IMPORT IMAGE .jpg */}
+                    </ div>
                     <div className='service-container'>
                         <h2>About Company</h2>
                     </div>

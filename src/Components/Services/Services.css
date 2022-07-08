@@ -10,7 +10,7 @@
     opacity: .9;
     margin: 10px 5% 10px 5%;
     padding: 8px 40px 8px 40px;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 } 
 
 .services {
@@ -20,6 +20,27 @@
     height: auto;
     background: rgb(81, 89, 202);
     opacity: .9;
+}
+
+.img-container {
+    height: 80vh;
+    width: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.adrian {
+    display: flex;
+    height: 80vh;
+    width: 200vh;
+    border: none;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    background: transparent;
+    /* margin: 10px 5% 10px 5%; */
+    /* padding: 8px 40px 8px 40px; */
+    /* margin-top: 20px; */
 }
 
 h2 {

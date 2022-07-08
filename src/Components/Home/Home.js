@@ -125,7 +125,9 @@ export default class Home extends Component {
 
                 <Services />
 
-
+                <div>
+                    <div className="footer">This is my footer</div>
+                </div>
             </Background>
         )
     }
