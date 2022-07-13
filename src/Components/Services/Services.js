@@ -8,12 +8,12 @@ export default class Services extends Component {
     constructor(props){
         super(props);
 
-        this.getLogin = this.getLogin.bind(this);
+        // this.getLogin = this.getLogin.bind(this);
     }
 
-    getLogin(){
-        this.props.history.push('/')
-    }
+    // getLogin(){
+    //     this.props.history.push('/')
+    // }
 
     // componentDidMount(){
     // }
@@ -44,7 +44,7 @@ export default class Services extends Component {
                         <img className='adrian' src={Adrian} alt='Team Image' />
                         {/* RESEARCH HOW TO IMPORT IMAGE .jpg */}
                     </ div>
-                    <div className='service-container'>
+                    <div className='about-container'>
                         <h2>About Company</h2>
                     </div>
                 </div>
