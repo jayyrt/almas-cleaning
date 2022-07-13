@@ -1,5 +1,5 @@
 .service-container {
-    height: 80vh;
+    height: fit-content;
     width: auto;
     border: transparent;
     align-items: center;
@@ -7,10 +7,8 @@
     justify-content: center;
     flex-wrap: nowrap;
     background: transparent;
-    opacity: .9;
-    /* margin: 10px 5% 10px 5%; */
+    opacity: .99;
     padding: 2px 40px 2px 40px;
-    /* margin-top: 20px; */
     margin-left: 0%;
     margin-right: 0%;
 } 
@@ -21,7 +19,7 @@
     padding: 8px 40px 8px 40px;
     height: auto;
     background: transparent;
-    opacity: .9;
+    opacity: .99;
 }
 
 .img-container {
@@ -52,7 +50,7 @@ h2 {
     align-items: center;
     justify-content: center;
     background: rgb(81, 89, 202);
-    opacity: .9;
+    opacity: .99;
     border: black solid 1px;
     margin: auto;
     padding: 8px 40px 8px 40px;
@@ -65,7 +63,7 @@ h2 {
     width: 250px;
     background: rgb(81, 89, 202);
     height: 250px;
-    opacity: .9;
+    opacity: .99;
     margin: auto;
 };
 
@@ -88,7 +86,7 @@ h2 {
     justify-content: center;
     flex-wrap: nowrap;
     background: transparent;
-    opacity: .9;
+    opacity: .99;
     /* margin: 10px 5% 10px 5%; */
     padding: 2px 40px 2px 40px;
     /* margin-top: 20px; */

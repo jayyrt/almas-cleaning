@@ -74,7 +74,7 @@ export default class Home extends Component {
     // }
 
     render() {
-        const { username, password, email, showSignInModal } = this.state;
+         const { username, password, email, showSignInModal } = this.state;
         return (
             <Background>
                 <ToastContainer />

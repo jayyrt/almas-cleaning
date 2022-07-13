@@ -29,14 +29,32 @@ export default class Services extends Component {
                             <div className='service-content'>
                                 <h3>Deep Cleaning</h3>
                                 <p>This service is a deep clean</p>
+                                <ul>
+                                    <li>Restrooms deep clean</li>
+                                    <li>Detail kitchen</li>
+                                    <li>Dust & polish</li>
+                                    <li>Sweep & mop</li>
+                                </ul>
                             </div>
                             <div className='service-content'>
                                 <h3>Daily Cleaning</h3>
                                 <p>This service is a daily clean</p>
+                                <ul>
+                                    <li>Restrooms deep clean</li>
+                                    <li>Detail kitchen</li>
+                                    <li>Dust & polish</li>
+                                    <li>Sweep & mop</li>
+                                </ul>
                             </div>
                             <div className='service-content'>
                                 <h3>Construction Cleaning</h3>
                                 <p>This service is a construction clean</p>
+                                <ul>
+                                    <li>Restrooms deep clean</li>
+                                    <li>Detail kitchen</li>
+                                    <li>Dust & polish</li>
+                                    <li>Sweep & mop</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
