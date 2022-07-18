@@ -16,6 +16,9 @@ export default class Home extends Component {
             username: '',
             password: '',
             email: '',
+            name: '',
+            phone: '',
+            address: '',
             // MODAL STATES
             showSignInModal: false,
             showRegisterModal: false,
@@ -24,6 +27,8 @@ export default class Home extends Component {
         this.register = this.register.bind(this);
         this.handleCloseSignInModal = this.handleCloseSignInModal.bind(this);
         this.handleOpenSignInModal = this.handleOpenSignInModal.bind(this);
+        this.handleOpenRegisterModal = this.handleOpenRegisterModal.bind(this);
+        this.handleCloseRegisterModal = this.handleCloseRegisterModal.bind(this);
         // this.getServices = this.getServices.bind(this);
     }
 
@@ -41,11 +46,11 @@ export default class Home extends Component {
 
     // ADD handleOpenRegisterModal &&& handleCloseRegisterModal
     handleOpenRegisterModal(){
-
+        this.setState({ showRegisterModal: true });
     };
 
-    handleCloseRegisterModal(){
-
+    handleCloseRegisterModal(){ 
+        this.setState({ username: '', name: '', email: '', address: '', phone: '', password: '', showRegisterModal: false });
     };
 
     register() {
@@ -74,7 +79,7 @@ export default class Home extends Component {
     // }
 
     render() {
-         const { username, password, email, showSignInModal } = this.state;
+         const { username, password, email, phone, name, address, showSignInModal, showRegisterModal } = this.state;
         return (
             <Background>
                 <ToastContainer />
@@ -94,6 +99,7 @@ export default class Home extends Component {
                 closeTimeoutMS={this.modalFadeMilliseconds}
                 className="modal"
             >
+
                 <div className="login-container">
                     <div className="container">
                         <input className="input-box"
@@ -116,11 +122,64 @@ export default class Home extends Component {
                         />
                         <div className="buttons">
                         <button className="buttons" onClick={this.login}>Login</button>
-                        <button className="buttons" onClick={this.register}>Register</button>
+                        <button className="buttons" onClick={this.handleOpenRegisterModal}>Register</button>
                         <button className="buttons" onClick={this.handleCloseSignInModal}>Cancel</button>
                         </div>
                     </div>
                 </div>
+
+                </ReactModal>
+
+                <ReactModal
+                    isOpen={showRegisterModal}
+                    contentLabel="Sign In Modal"
+                    OnRequestClose={this.handleCloseRegisterModal}
+                    closeTimeoutMS={this.modalFadeMilliseconds}
+                    className="modal"
+                >
+
+                    <div className="login-container">
+                        <div className="container">
+                        <input className="input-box"
+                            type="text"
+                            placeholder="Username"
+                            value={username}
+                            onChange={(e) => this.setState({ username: e.target.value })}
+                            />
+                            <input className="input-box"
+                            type="text"
+                            placeholder="First & Last Name"
+                            value={name}
+                            onChange={(e) => this.setState({ name: e.target.value })}
+                            />
+    
+                            <input className="input-box"
+                            type="text"
+                            placeholder="email"
+                            value={email}
+                            onChange={(e) => this.setState({ email: e.target.value })}
+                            />
+
+                            <input className="input-box"
+                            type="text"
+                            placeholder="Address"
+                            value={address}
+                            onChange={(e) => this.setState({ address: e.target.value })}
+                            />
+
+                            <input className="input-box"
+                            type="text"
+                            placeholder="Phone Number"
+                            value={phone}
+                            onChange={(e) => this.setState({ phone: e.target.value })}
+                            />
+                        <div className="buttons">
+                            <button className="buttons" onClick={this.register}>Register</button>
+                            <button className="buttons" onClick={this.handleCloseRegisterModal}>Cancel</button>
+                        </div>
+                        </div>
+
+                    </div>
                 </ReactModal>
 
                 <Services />
