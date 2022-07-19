@@ -72,7 +72,8 @@
 
 .header{
     height: 10vh;
-    padding: auto;
+    padding: none;
+    margin: auto;
     display: flex;
     background: black;
     opacity: .8;

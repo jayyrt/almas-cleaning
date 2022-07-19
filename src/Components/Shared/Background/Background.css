@@ -1,5 +1,6 @@
 .overlay {
     background: url('./peacock-background.jpg');
+    display: flex;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -11,6 +12,8 @@
   
   .inner-overlay {
     background: url('./peacock-background.jpg');
+    /* display: flex; */ 
+    /* uncomment display: flex to break the page */
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
