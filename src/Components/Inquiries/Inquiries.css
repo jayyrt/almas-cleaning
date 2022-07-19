@@ -1,0 +1,20 @@
+.inquiries-container {
+    height: 50vh;
+    width: auto;
+    justify-content: center;
+    padding: 20vh 20vh 20vh 20vh;
+    background: rgb(81, 89, 202);
+    opacity: .8;
+}
+
+.inquiries-menu {
+    width: 20vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-family: cursive;
+    color: black;
+    background: transparent;
+    border: solid black 2px;
+    padding: 0px 10px 0px 10px;
+}

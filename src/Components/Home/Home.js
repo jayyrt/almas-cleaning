@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Services from '../Services/Services';
+import Inquiries from '../Inquiries/Inquiries';
 import ReactModal from 'react-modal';
 import axios from 'axios';
 import Background from '../Shared/Background/Background';
@@ -183,6 +184,8 @@ export default class Home extends Component {
                 </ReactModal>
 
                 <Services />
+
+                <Inquiries />
 
                 <div>
                     <div className="footer">This is my footer</div>
