@@ -33,16 +33,12 @@
 
 .adrian {
     display: flex;
-    height: 95vh;
+    height: 100%;
     width: 100%;
     border: none;
     align-content: center;
     justify-content: center;
-    /* flex-wrap: nowrap; */
     background: transparent;
-    /* margin: 10px 5% 10px 5%; */
-    /* padding: 8px 40px 8px 40px; */
-    /* margin-top: 20px; */
 }
 
 h2 {
@@ -71,10 +67,8 @@ h2 {
 
 .info-content{
     border: transparent;
-    /* margin: auto; */
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
-    /* padding: 8px 40px 8px 40px; */
 };
