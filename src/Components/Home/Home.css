@@ -154,3 +154,53 @@
   .ReactModal__Overlay--before-close {
     opacity: 0;
   }
+
+  /* EVERYTHING BELOW THIS LINE STYLES THE FOOTER & ABOUT COMPANY */
+
+  .about-header {
+    height: 15px;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    /* border: black solid 1px; */
+    margin: auto;
+    padding: 20px 40px 20px 40px;
+}
+
+.about-content {
+  height: auto;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border: none;
+  margin: 0;
+  padding: 20px 60px 20px 60px;
+}
+
+.about-container {
+  height: auto;
+  width: auto;
+  border: transparent;
+  align-items: center;
+  /* align-content: left; */
+  justify-content: center;
+  flex-wrap: nowrap;
+  background: white;
+  margin: none;
+  padding: 30px 0px 0px 0px;
+} 
+  
+  .footer {
+    height: auto;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: 900;
+    margin: 0;
+    padding: 15px 5px 5px 5px;
+  }

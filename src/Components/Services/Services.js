@@ -62,9 +62,7 @@ export default class Services extends Component {
                         <img className='adrian' src={Adrian} alt='Team Image' />
                         {/* RESEARCH HOW TO IMPORT IMAGE .jpg */}
                     </ div>
-                    <div className='about-container'>
-                        <h2 className="about-header">About Company</h2>
-                    </div>
+
                 </div>
             </div>
             </Background>

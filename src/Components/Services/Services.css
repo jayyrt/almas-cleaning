@@ -58,18 +58,6 @@ h2 {
     padding: 10px 40px 10px 40px;
 }
 
-.about-header {
-        height: auto;
-        width: auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: white;
-        /* border: black solid 1px; */
-        margin: auto;
-        padding: 20px 40px 20px 40px;
-}
-
 .service-content {
     border: black solid 1px;
     flex-direction: column;
@@ -90,17 +78,3 @@ h2 {
     justify-content: center;
     /* padding: 8px 40px 8px 40px; */
 };
-
-.about-container {
-    height: 80vh;
-    width: auto;
-    border: transparent;
-    align-items: center;
-    /* align-content: left; */
-    justify-content: center;
-    flex-wrap: nowrap;
-    background: transparent;
-    opacity: .99;
-    margin: auto;
-    padding: 2px 40px 2px 40px;
-} 
