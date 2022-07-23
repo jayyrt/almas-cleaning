@@ -156,7 +156,7 @@ export default class Home extends Component {
     
                             <input className="input-box"
                             type="text"
-                            placeholder="email"
+                            placeholder="Email"
                             value={email}
                             onChange={(e) => this.setState({ email: e.target.value })}
                             />

@@ -28,7 +28,6 @@ export default class Services extends Component {
                         <div className='services'>
                             <div className='service-content'>
                                 <h3>Deep Cleaning</h3>
-                                <p>This service is a deep clean</p>
                                 <ul>
                                     <li>Restrooms deep clean</li>
                                     <li>Detail kitchen</li>
@@ -38,7 +37,6 @@ export default class Services extends Component {
                             </div>
                             <div className='service-content'>
                                 <h3>Daily Cleaning</h3>
-                                <p>This service is a daily clean</p>
                                 <ul>
                                     <li>Restrooms deep clean</li>
                                     <li>Detail kitchen</li>
@@ -47,8 +45,7 @@ export default class Services extends Component {
                                 </ul>
                             </div>
                             <div className='service-content'>
-                                <h3>Construction Cleaning</h3>
-                                <p>This service is a construction clean</p>
+                                <h3>Construction Cleaning</h3>                        
                                 <ul>
                                     <li>Restrooms deep clean</li>
                                     <li>Detail kitchen</li>
@@ -60,7 +57,6 @@ export default class Services extends Component {
                     </div>
                     <div className='img-container'>
                         <img className='adrian' src={Adrian} alt='Team Image' />
-                        {/* RESEARCH HOW TO IMPORT IMAGE .jpg */}
                     </ div>
 
                 </div>
