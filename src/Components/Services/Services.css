@@ -65,10 +65,89 @@ h2 {
     margin: auto;
 };
 
-.info-content{
-    border: transparent;
+.service-flipcard-inner-1 {
+    border: black solid 1px;
+    flex-direction: column;
+    padding: 8px 30px 8px 30px;
+    width: 250px;
+    background: rgb(81, 89, 202);
+    height: 250px;
+    opacity: .99;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+};
+
+.flip-card:hover .service-flipcard-inner-1 {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front-1, .flip-card-back-1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+.service-flipcard-inner-2 {
+    border: black solid 1px;
+    flex-direction: column;
+    padding: 8px 30px 8px 30px;
+    width: 250px;
+    background: rgb(81, 89, 202);
+    height: 250px;
+    opacity: .99;
+    margin: auto;
     display: flex;
     align-items: center;
     align-content: center;
     justify-content: center;
 };
+
+.flip-card:hover .service-flipcard-inner-2 {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front-2, .flip-card-back-2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+
+.service-flipcard-inner-3 {
+    border: black solid 1px;
+    flex-direction: column;
+    padding: 8px 30px 8px 30px;
+    width: 250px;
+    background: rgb(81, 89, 202);
+    height: 250px;
+    opacity: .99;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+};
+
+.flip-card:hover .service-flipcard-inner-3 {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front-3, .flip-card-back-3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
