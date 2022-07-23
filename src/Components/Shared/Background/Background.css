@@ -12,7 +12,7 @@
   
   .inner-overlay {
     background: url('./peacock-background.jpg');
-    /* display: flex; */ 
+    width: 100%;
     /* uncomment display: flex to break the page */
     background-repeat: no-repeat;
     background-attachment: fixed;

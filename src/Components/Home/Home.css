@@ -1,3 +1,7 @@
+.exterior {
+  width: 100%;
+}
+
 .login-container {
     background:transparent;
     height: 90vh;
@@ -13,20 +17,6 @@
     top: 50px;   
     padding: 20px;
 }
-
-  /* .modal {
-    height: 500px;
-    width: 400px;
-    position: relative;
-    top: 50px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #707070;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-  } */
 
 .container {
     height: 50vh;
@@ -72,6 +62,7 @@
 
 .header{
     height: 10vh;
+    width: auto;
     padding: none;
     margin: auto;
     display: flex;

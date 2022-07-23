@@ -84,7 +84,7 @@ export default class Home extends Component {
         return (
             <Background>
                 <ToastContainer />
-            
+
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             <div className="links">
@@ -190,6 +190,7 @@ export default class Home extends Component {
                 <div>
                     <div className="footer">This is my footer</div>
                 </div>
+            
             </Background>
         )
     }

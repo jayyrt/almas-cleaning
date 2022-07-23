@@ -3,7 +3,6 @@
     width: auto;
     border: transparent;
     align-items: center;
-    /* align-content: left; */
     justify-content: center;
     flex-wrap: nowrap;
     background: transparent;
@@ -16,9 +15,11 @@
 
 .services {
     display: flex;
+    justify-content: center;
     flex-direction: row;
-    padding: 8px 40px 8px 40px;
+    padding: 8px 10px 8px 10px;
     height: auto;
+    width: 100%;
     background: transparent;
     opacity: .99;
 }
@@ -33,7 +34,7 @@
 .adrian {
     display: flex;
     height: 95vh;
-    width: auto;
+    width: 100%;
     border: none;
     align-content: center;
     justify-content: center;
@@ -46,7 +47,7 @@
 
 h2 {
     height: auto;
-    width: 80%;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,10 +70,10 @@ h2 {
         padding: 20px 40px 20px 40px;
 }
 
-.service-content{
+.service-content {
     border: black solid 1px;
     flex-direction: column;
-    padding: 30px 30px 8px 30px;
+    padding: 8px 30px 8px 30px;
     width: 250px;
     background: rgb(81, 89, 202);
     height: 250px;
