@@ -1,3 +1,5 @@
+@import url('https://fonts.google.com/specimen/Birthstone');
+
 .exterior {
   width: 100%;
 }
@@ -159,12 +161,14 @@
 
   .about-header {
     height: 15px;
-    width: 50vh;
+    width: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: white;
-    /* border: black solid 1px; */
+    font-family: cursive;
+    font-style: bold;
+    border-bottom: solid black 2px;
     margin: auto;
     padding: 20px 40px 20px 40px;
 }
@@ -175,6 +179,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: cursive;
   background: white;
   border: none;
   margin: 0;

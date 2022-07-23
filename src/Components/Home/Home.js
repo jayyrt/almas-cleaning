@@ -189,9 +189,9 @@ export default class Home extends Component {
 
                 <div>
                     <div className='about-container'>
-                        <h2 className="about-header">
+                        <h1 className="about-header">
                             About Company
-                        </h2>
+                        </h1>
                         <h3 className="about-content">
                             Here at Alma's Cleaning Company we pride in providing the most Detail Oriented Janitorial Services. We vow to practice Respect, Integrity, Professionalism, Quality & Most importantly Family in every facility we approach. Thru our outstanding Consistency & Teamwork we vow to bring to your environment the Wellness & Peace your loved ones deserve. 
                         </h3>
