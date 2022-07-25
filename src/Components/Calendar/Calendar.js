@@ -54,6 +54,9 @@ class Calendar extends Component {
                 <div className="fri-container">Friday</div>
                 <div className="sat-container">Saturday</div>
             </div>
+
+            <div className="footer-2">Copyright © 2022 Alma's Cleaning Company</div>
+            
         </Background>
         )        
     }

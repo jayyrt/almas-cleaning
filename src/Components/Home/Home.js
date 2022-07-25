@@ -89,7 +89,7 @@ export default class Home extends Component {
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>
             <div className="links">
-                <button className="link-content" onClick={this.handleOpenSignInModal}>Sign In</button> 
+                <button className="link-content" onClick={this.handleOpenSignInModal}>My Account</button> 
                 {/* ERROR WHEN SEARCHING FOR props className={`sign-in ${props.username ? 'sign-in-hidden' : ''}`} */}
                 {/* <p className={`signed-in-user  ${props.username ? '' : 'sign-in-hidden'}`}>Welcome: {props.user.username}</p> */}
             </div>

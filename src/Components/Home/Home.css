@@ -214,3 +214,15 @@
     margin: 0;
     padding: 15px 5px 5px 5px;
   }
+
+  .footer-2 {
+    height: auto;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-weight: 900;
+    margin: 0;
+    opacity: .8;
+    padding: 15px 5px 5px 5px;
+  }

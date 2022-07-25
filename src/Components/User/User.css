@@ -1,7 +1,7 @@
 .user-container {
     background: transparent;
     height: 80vh;
-    width: 80%;
+    width: auto;
     margin: auto;
     display: flex;
     align-items: center;
@@ -9,7 +9,6 @@
     flex-direction: column;  
     justify-content: center;
     flex-wrap: nowrap;
-    border: black solid 2px;
     background: rgb(81, 89, 202);
     opacity: .8;
 }

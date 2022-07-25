@@ -97,6 +97,9 @@ export default class User extends Component {
                 <button className="buttons" onClick={this.updateUser}>Update</button>
                 </div>
             </div>
+
+            <div className="footer-2">Copyright © 2022 Alma's Cleaning Company</div>
+            
             </Background>
         )
     }
