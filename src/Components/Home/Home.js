@@ -193,7 +193,7 @@ export default class Home extends Component {
                             About Company
                         </h1>
                         <h3 className="about-content">
-                            Here at Alma's Cleaning Company we pride in providing the most Detail Oriented Janitorial Services. We vow to practice Respect, Integrity, Professionalism, Quality & Most importantly Family in every facility we approach. Thru our outstanding Consistency & Teamwork we vow to bring to your environment the Wellness & Peace your loved ones deserve. 
+                            Here at Alma's Cleaning Company we pride in providing the most Detail Oriented Janitorial Services. We vow to practice Respect, Integrity, Professionalism, Quality & Most importantly Family in every facility we approach. Thru our outstanding Consistency & Teamwork we commit to bring to your environment the Wellness & Peace your loved ones deserve. 
                         </h3>
                     </div>
                     <div className="footer">Copyright © 2022 Alma's Cleaning Company</div>
