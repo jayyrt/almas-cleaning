@@ -36,6 +36,10 @@ export default class Services extends Component {
 
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     <div className='services-content' onClick={this.handleClick}>
+                        <img />
+                    </div>
+                    
+                    <div className='services-content' onClick={this.handleClick}>
                         <h3>Deep Cleaning</h3>
                         <ul>
                             <li>Restrooms deep clean</li>
@@ -45,12 +49,13 @@ export default class Services extends Component {
                         </ul>
                     </div>
 
-                    <div className='services-content' onClick={this.handleClick}>
-                        <img />
-                    </div>
                     </ ReactCardFlip>
                     
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                    <div className='services-content' onClick={this.handleClick}>
+                        <img />
+                    </div>
+
                     <div className='services-content' onClick={this.handleClick}>
                         <h3>Daily Cleaning</h3>
                         <ul>
@@ -61,12 +66,14 @@ export default class Services extends Component {
                         </ul>
                     </div>
 
-                    <div className='services-content' onClick={this.handleClick}>
-                        <img />
-                    </div>
                     </ ReactCardFlip>      
 
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
+                    
+                    <div className='services-content' onClick={this.handleClick}>
+                        <img />
+                    </div>
+                    
                     <div className='services-content' onClick={this.handleClick}>
                         <h3>Construction Cleaning</h3>                        
                         <ul>
@@ -77,9 +84,6 @@ export default class Services extends Component {
                         </ul>
                     </div>
 
-                    <div className='services-content' onClick={this.handleClick}>
-                        <img />
-                    </div>
                     </ ReactCardFlip>   
                 </div>    
                 </div>   

@@ -1,6 +1,6 @@
 .inquiries-container {
     height: 50vh;
-    width: auto;
+    width: 100%;
     justify-content: center;
     padding: 20vh 20vh 20vh 20vh;
     background: rgb(81, 89, 202);

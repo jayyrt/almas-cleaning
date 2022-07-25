@@ -156,6 +156,12 @@
   .ReactModal__Overlay--before-close {
     opacity: 0;
   }
+  /* INQUIRIES & GALLERY BELLOW */
+
+  .inquiries-gallery {
+    display: flex;
+    width: 100%;
+  }
 
   /* EVERYTHING BELOW THIS LINE STYLES THE FOOTER & ABOUT COMPANY */
 

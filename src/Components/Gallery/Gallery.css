@@ -1,0 +1,8 @@
+.gallery-container {
+    height: auto;
+    width: 100%;
+    display: flex;
+    background:white;
+    padding: 20vh 20vh 20vh 20vh;
+    opacity: .8;
+}
