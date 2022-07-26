@@ -11,18 +11,25 @@ export default class Services extends Component {
         this.state = {
             isFlipped: false
         };
-            this.handleClick = this.handleClick.bind(this);
-        // this.getLogin = this.getLogin.bind(this);
+            this.handleDeepFlip = this.handleDeepFlip.bind(this);
+            this.handleDailyFlip = this.handleDailyFlip.bind(this);
+            this.handleConstructionFlip = this.handleConstructionFlip.bind(this);
     }
-
-    // getLogin(){
-    //     this.props.history.push('/')
-    // }
 
     // componentDidMount(){
     // }
 
-    handleClick(e) {
+    handleDeepFlip(e) {
+        e.preventDefault();
+        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    }
+
+    handleDailyFlip(e) {
+        e.preventDefault();
+        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
+    }
+
+    handleConstructionFlip(e) {
         e.preventDefault();
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
     }
@@ -35,11 +42,11 @@ export default class Services extends Component {
                 <div className='services'>
 
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                    <div className='services-content' onClick={this.handleClick}>
+                    <div className='services-content' onMouseEnter={this.handleDeepFlip}>
                         <img />
                     </div>
                     
-                    <div className='services-content' onClick={this.handleClick}>
+                    <div className='services-content' onMouseLeave={this.handleDeepFlip}>
                         <h3>Deep Cleaning</h3>
                         <ul>
                             <li>Restrooms deep clean</li>
@@ -52,11 +59,11 @@ export default class Services extends Component {
                     </ ReactCardFlip>
                     
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                    <div className='services-content' onClick={this.handleClick}>
+                    <div className='services-content' onMouseEnter={this.handleDailyFlip}>
                         <img />
                     </div>
 
-                    <div className='services-content' onClick={this.handleClick}>
+                    <div className='services-content' onMouseLeave={this.handleDailyFlip}>
                         <h3>Daily Cleaning</h3>
                         <ul>
                             <li>Restrooms deep clean</li>
@@ -70,11 +77,11 @@ export default class Services extends Component {
 
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     
-                    <div className='services-content' onClick={this.handleClick}>
+                    <div className='services-content' onMouseEnter={this.handleConstructionFlip}>
                         <img />
                     </div>
                     
-                    <div className='services-content' onClick={this.handleClick}>
+                    <div className='services-content' onMouseLeave={this.handleConstructionFlip}>
                         <h3>Construction Cleaning</h3>                        
                         <ul>
                             <li>Restrooms deep clean</li>

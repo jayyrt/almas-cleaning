@@ -7,6 +7,11 @@
   background-position: center;
   background-size: cover;
   text-align: center;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  box-sizing: border-box;
 }
 
 .App-link {
