@@ -11,7 +11,7 @@ export default class Inquiries extends Component {
         return (
             <div className="inquiries-container">
                 <button className='inquiries-menu'>Inquiry</button>
-
+                <input className='inquiries-msg' />
             </div>
         )
     }
