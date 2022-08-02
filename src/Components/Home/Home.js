@@ -15,9 +15,8 @@ export default class Home extends Component {
         super();
         this.state = {
             // USER STATES
-            username: '',
-            password: '',
             email: '',
+            password: '',
             name: '',
             phone: '',
             address: '',
@@ -39,7 +38,7 @@ export default class Home extends Component {
     };
 
     handleCloseSignInModal() {
-        this.setState({ username: '', password: '', showSignInModal: false });
+        this.setState({ email: '', password: '', showSignInModal: false });
     };
 
     modalFadeMilliseconds() {
@@ -52,24 +51,24 @@ export default class Home extends Component {
     };
 
     handleCloseRegisterModal(){ 
-        this.setState({ username: '', name: '', email: '', address: '', phone: '', password: '', showRegisterModal: false });
+        this.setState({ name: '', email: '', address: '', phone: '', password: '', showRegisterModal: false });
     };
 
     register() {
-        const { username, password, email } = this.state;
-        axios.post('/auth/register', { username, password, email })
+        const { email, password } = this.state;
+        axios.post('/auth/register', { email, password })
         .then(calendar => {
-            this.setState({ username: '', password: '', email: '' });
+            this.setState({ email: '', password: '' });
             this.props.updateUser(calendar.data);
         })
         .catch(err => console.log(err));        
     }
 
     login() {
-        const { username, password } = this.state;
-        axios.post('/auth/login', { username, password })
+        const { email, password } = this.state;
+        axios.post('/auth/login', { email, password })
         .then(calendar => {
-            this.props.history.push('/my-calendar', { username, password });
+            this.props.history.push('/my-calendar', { email, password });
             toast.success(`Welcome to your calendar`);
             // this.props.updateUser(calendar.data)
         })
@@ -81,7 +80,7 @@ export default class Home extends Component {
     // }
 
     render() {
-         const { username, password, email, phone, name, address, showSignInModal, showRegisterModal } = this.state;
+         const { email, password, phone, name, address, showSignInModal, showRegisterModal } = this.state;
         return (
             <Background>
                 <ToastContainer />
@@ -104,12 +103,7 @@ export default class Home extends Component {
 
                 <div className="login-container">
                     <div className="container">
-                        <input className="input-box"
-                        type="text"
-                        placeholder="Username"
-                        value={username}
-                        onChange={(e) => this.setState({ username: e.target.value })}
-                        />
+                    
                         <input className="input-box"
                         type="text"
                         placeholder="Email"
@@ -142,12 +136,6 @@ export default class Home extends Component {
 
                     <div className="login-container">
                         <div className="container">
-                        <input className="input-box"
-                            type="text"
-                            placeholder="Username"
-                            value={username}
-                            onChange={(e) => this.setState({ username: e.target.value })}
-                            />
                             <input className="input-box"
                             type="text"
                             placeholder="First & Last Name"
@@ -174,6 +162,13 @@ export default class Home extends Component {
                             placeholder="Phone Number"
                             value={phone}
                             onChange={(e) => this.setState({ phone: e.target.value })}
+                            />
+
+                            <input className="input-box"
+                            type="text"
+                            placeholder="Password"
+                            value={phone}
+                            onChange={(e) => this.setState({ password: e.target.value })}
                             />
                         <div className="buttons">
                             <button className="buttons" onClick={this.register}>Register</button>
