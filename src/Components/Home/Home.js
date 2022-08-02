@@ -55,10 +55,10 @@ export default class Home extends Component {
     };
 
     register() {
-        const { email, password } = this.state;
-        axios.post('/auth/register', { email, password })
+        const { name, email, address, phone, password } = this.state;
+        axios.post('/auth/register', { name, email, address, phone, password })
         .then(calendar => {
-            this.setState({ email: '', password: '' });
+            this.setState({ name: '', email: '', address: '', phone: '', password: '' });
             this.props.updateUser(calendar.data);
         })
         .catch(err => console.log(err));        
@@ -167,7 +167,7 @@ export default class Home extends Component {
                             <input className="input-box"
                             type="text"
                             placeholder="Password"
-                            value={phone}
+                            value={password}
                             onChange={(e) => this.setState({ password: e.target.value })}
                             />
                         <div className="buttons">

@@ -1,34 +1,13 @@
 CREATE TABLE users
  (
 id SERIAL PRIMARY KEY,
-username VARCHAR(120),
-hash text
- );
-
-ALTER TABLE users
-ADD COLUMN email VARCHAR(60);
-
-INSERT INTO users
-(username, hash)
-VALUES
-('jayyrt', 'nov292016'),
-('almaromero', 'chikis1973'),
-('hectorlara', 'january31');
-
-CREATE TABLE user_info
-(
-userid INTEGER REFERENCES users(id) NOT NULL,
 name TEXT,
+email VARCHAR(60),
 address VARCHAR(200),
-city VARCHAR(50),
 phone_num VARCHAR(10)
 CONSTRAINT chk_phone CHECK (phone_num NOT LIKE '%[^0-9]%')
-);
-
-SELECT *
-FROM users
-JOIN user_info ON users.id = user_info.userID;
-
+hash text
+ );
 
 CREATE TABLE calendar
 (
