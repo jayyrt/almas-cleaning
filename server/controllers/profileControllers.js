@@ -3,7 +3,7 @@
 module.exports = {
     getInfo: async (req, res) => {
         try {
-            const userInfo = await req.app.get('db').get_user_info(req.params.userID); // does .params need to be used?
+            const userInfo = await req.app.get('db').get_user(req.params.userID); // does .params need to be used?
             return res.status(200).send(userInfo);
         } catch (e) {
             console.log(e);
