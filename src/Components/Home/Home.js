@@ -6,6 +6,7 @@ import ReactModal from 'react-modal';
 import axios from 'axios';
 import Background from '../Shared/Background/Background';
 import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './Home.css';
 
 ReactModal.setAppElement('#root');
@@ -69,7 +70,7 @@ export default class Home extends Component {
         axios.post('/auth/login', { email, password })
         .then(calendar => {
             this.props.history.push('/my-calendar', { email, password });
-            toast.success(`Welcome to your calendar`);
+            toast.success(`Welcome to Alma's calendar`);
             // this.props.updateUser(calendar.data)
         })
         .catch((err) => toast.error(`Incorrect login information`));

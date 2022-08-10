@@ -1,16 +1,14 @@
 .service-container {
     height: fit-content;
     width: auto;
-    border: transparent;
+    border: none;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    background: transparent;
-    opacity: .99;
-    padding: 2px 40px 2px 40px;
-    margin-left: 0%;
-    margin-right: 0%;
-    margin-top: 5vh;
+    background: #ccf5ff;
+    opacity: .9;
+    padding: 30px 40px 30px 40px;
+    margin: 0;
 } 
 
 .services {
@@ -42,15 +40,17 @@
     background: transparent;
 }
 
-h2 {
+h1 {
     height: auto;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(81, 89, 202);
+    background: transparent;
+    font-family: cursive;
+    font-style: bold;
     opacity: .99;
-    border: black solid 1px;
+    border: none;
     margin: auto;
     padding: 10px 40px 10px 40px;
 }
