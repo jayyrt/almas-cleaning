@@ -3,6 +3,7 @@ import ReactCardFlip from 'react-card-flip';
 import Adrian from './Adrian.jpg';
 import Background from './../Shared/Background/Background';
 import Construction from './Construction';
+import Deep from './Deep';
 // import axios from 'axios';
 import './Services.css';
 
@@ -12,18 +13,12 @@ export default class Services extends Component {
         this.state = {
             isFlipped: false
         };
-            this.handleDeepFlip = this.handleDeepFlip.bind(this);
             this.handleDailyFlip = this.handleDailyFlip.bind(this);
     }
 
     // componentDidMount(){
     // }
-
-    handleDeepFlip(e) {
-        e.preventDefault();
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-    }
-
+    
     handleDailyFlip(e) {
         e.preventDefault();
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
@@ -35,24 +30,8 @@ export default class Services extends Component {
             <div className='service-container'>
                 <h1>Services</h1>
                 <div className='services'>
+                    <Deep />
 
-                    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                    <div className='services-content' onMouseEnter={this.handleDeepFlip}>
-                        <img />
-                    </div>
-                    
-                    <div className='services-content' onMouseLeave={this.handleDeepFlip}>
-                        <h3>Deep Cleaning</h3>
-                        <ul>
-                            <li>Restrooms deep clean</li>
-                            <li>Detail kitchen</li>
-                            <li>Dust & polish</li>
-                            <li>Sweep & mop</li>
-                        </ul>
-                    </div>
-
-                    </ ReactCardFlip>
-                    
                     <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     <div className='services-content' onMouseEnter={this.handleDailyFlip}>
                         <img />
