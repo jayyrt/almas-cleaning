@@ -18,12 +18,6 @@ export default class Services extends Component {
 
     // componentDidMount(){
     // }
-    
-    handleDailyFlip(e) {
-        e.preventDefault();
-        this.setState(prevState => ({ isFlipped: !prevState.isFlipped }));
-    }
-
     render() {
         return (
             <Background>
@@ -31,23 +25,7 @@ export default class Services extends Component {
                 <h1>Services</h1>
                 <div className='services'>
                     <Deep />
-
-                    <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                    <div className='services-content' onMouseEnter={this.handleDailyFlip}>
-                        <img />
-                    </div>
-
-                    <div className='services-content' onMouseLeave={this.handleDailyFlip}>
-                        <h3>Daily Cleaning</h3>
-                        <ul>
-                            <li>Restrooms deep clean</li>
-                            <li>Detail kitchen</li>
-                            <li>Dust & polish</li>
-                            <li>Sweep & mop</li>
-                        </ul>
-                    </div>
-
-                    </ ReactCardFlip>      
+                    <Daily />
                     <Construction />
                 </div>
                 </div>    
