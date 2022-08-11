@@ -4,6 +4,7 @@ import Adrian from './Adrian.jpg';
 import Background from './../Shared/Background/Background';
 import Construction from './Construction';
 import Deep from './Deep';
+import Daily from './Daily';
 // import axios from 'axios';
 import './Services.css';
 
@@ -13,7 +14,6 @@ export default class Services extends Component {
         this.state = {
             isFlipped: false
         };
-            this.handleDailyFlip = this.handleDailyFlip.bind(this);
     }
 
     // componentDidMount(){
