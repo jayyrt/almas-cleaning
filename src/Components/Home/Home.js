@@ -68,7 +68,7 @@ export default class Home extends Component {
     login() {
         const { email, password } = this.state;
         axios.post('/auth/login', { email, password })
-        .then(calendar => {
+        .then((res) => {
             this.props.history.push('/my-calendar', { email, password });
             toast.success(`Welcome to Alma's calendar`);
             // this.props.updateUser(calendar.data)
@@ -76,15 +76,11 @@ export default class Home extends Component {
         .catch((err) => toast.error(`Incorrect login information`));
     }
 
-    // getServices() {
-    //     this.props.history.push('/services');
-    // }
-
     render() {
          const { email, password, phone, name, address, showSignInModal, showRegisterModal } = this.state;
         return (
             <Background>
-                <ToastContainer />
+            <ToastContainer />
 
             <h1 className="header">
             <div className="title">Alma's Cleaning Company</div>

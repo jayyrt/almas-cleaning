@@ -9,9 +9,26 @@ export default class Inquiries extends Component {
 
     render() {
         return (
-            <div className="inquiries-container">
-                <button className='inquiries-menu'>Inquiry</button>
-                <input className='inquiries-msg' />
+            <div className='inquiries-exterior'>
+            <div className='inquiries-container'>
+                <input 
+                className='inquiries-inputs' 
+                placeholder='First & Last Name'
+                />
+                <input 
+                className='inquiries-inputs'
+                placeholder='Email'
+                />
+                <input className='inquiries-inputs' 
+                placeholder='Phone Number'
+                />
+                <select className='inquiries-menu'>
+                    <option>Schedule Estimate</option>
+                    <option>Service Inquiry</option>
+                    <option>General</option>
+                </select>
+                <textarea className='inquiries-msg'></textarea>
+            </div>
             </div>
         )
     }

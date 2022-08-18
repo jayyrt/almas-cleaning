@@ -1,4 +1,4 @@
-.inquiries-container {
+.inquiries-exterior {
     height: 50vh;
     width: 100%;
     display: flex;
@@ -9,21 +9,45 @@
 }
 
 .inquiries-menu {
-    height: 5vh;
-    width: 20vh;
+    height: 10vh;
+    width: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     font-family: cursive;
     color: black;
     background: transparent;
+    margin: 5px;
     border: solid black 2px;
     padding: 0px 10px 0px 10px;
+}
+
+
+.inquiries-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;  
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+}
+
+.inquiries-inputs{
+    height: 10vh;
+    width: 40vh;
+    margin: 5px;
 }
 
 .inquiries-msg {
     height: 40vh;
     width: 40vh;
-    justify-content: flex-start;
+    overflow: auto;
+    padding-top: 1;
+    padding-left: 1;
+    font-size: large;
+    line-height: 1em;
     border: solid black 1px;
 }

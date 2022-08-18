@@ -52,6 +52,7 @@ export default class User extends Component {
         // const is a block scoped -- cannot be updated! Find alternative
         const { name, address, city, phone_num } = this.state;
         return (
+
             <Background>
             <h1 className="header">
                 <div className="title">Alma's Cleaning Company</div>
