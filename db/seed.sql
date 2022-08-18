@@ -1,13 +1,25 @@
 CREATE TABLE users
  (
 id SERIAL PRIMARY KEY,
-name TEXT,
-email VARCHAR(60),
-address VARCHAR(200),
-phone_num VARCHAR(10)
-CONSTRAINT chk_phone CHECK (phone_num NOT LIKE '%[^0-9]%')
+name TEXT NOT NULL,
+email VARCHAR(60) NOT NULL,
+address VARCHAR(200) NOT NULL,
+phone_num VARCHAR(10) NOT NULL,
+CONSTRAINT chk_phone CHECK (phone_num NOT LIKE '%[^0-9]%'),
 hash text
  );
+
+CREATE TABLE inquiries
+ (
+id SERIAL PRIMARY KEY,
+name TEXT NOT NULL,
+email VARCHAR(60) NOT NULL,
+phone_num VARCHAR(10) NOT NULL,
+CONSTRAINT chk_phone CHECK (phone_num NOT LIKE '%[^0-9]%'),
+subject VARCHAR(15) NOT NULL,
+message TEXT NOT NULL,
+received TIMESTAMPTZ,
+ )
 
 CREATE TABLE calendar
 (
