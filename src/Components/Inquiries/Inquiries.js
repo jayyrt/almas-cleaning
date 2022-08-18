@@ -10,6 +10,7 @@ export default class Inquiries extends Component {
     render() {
         return (
             <div className='inquiries-exterior'>
+                <h2>Ask Us Anything!</h2>
             <div className='inquiries-container'>
                 <input 
                 className='inquiries-inputs' 

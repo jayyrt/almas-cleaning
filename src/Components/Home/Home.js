@@ -70,10 +70,10 @@ export default class Home extends Component {
         axios.post('/auth/login', { email, password })
         .then((res) => {
             this.props.history.push('/my-calendar', { email, password });
-            toast.success(`Welcome to Alma's calendar`);
+            toast.info(`Welcome to Alma's calendar`);
             // this.props.updateUser(calendar.data)
         })
-        .catch((err) => toast.error(`Incorrect login information`));
+        .catch((err) => toast.error(`Email or Password Incorrect`));
     }
 
     render() {

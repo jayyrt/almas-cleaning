@@ -13,6 +13,7 @@
     "express": "^4.17.3",
     "express-session": "^1.17.2",
     "massive": "^6.10.2",
+    "nodemailer": "^6.7.8",
     "npm": "^8.7.0",
     "react": "^17.0.2",
     "react-card-flip": "^1.1.5",
