@@ -29,6 +29,7 @@ export default class Inquiries extends Component {
                     <option>General</option>
                 </select>
                 <textarea className='inquiries-msg'></textarea>
+                <button>Submit Inquiry</button>
             </div>
             </div>
         )
