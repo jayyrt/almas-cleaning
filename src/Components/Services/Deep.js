@@ -22,10 +22,10 @@ export default class Deep extends Component {
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     <div className='services-content' onMouseEnter={this.handleDeepFlip}>
                         <img className='kitchen' src={Kitchen} />
+                        <h3>Deep Cleaning</h3>
                     </div>
                     
                     <div className='services-content' onMouseLeave={this.handleDeepFlip}>
-                        <h3>Deep Cleaning</h3>
                         <ul>
                             <li>Restrooms deep clean</li>
                             <li>Detail kitchen</li>

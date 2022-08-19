@@ -23,10 +23,10 @@ export default class Daily extends Component {
             <div className='services-content' onMouseEnter={this.handleDailyFlip}>
                 <div className='daily-img'>
                 <img className='daily-img' src={Windex}/>
+                <h3>Daily Cleaning</h3>
                 </div>
             </div>
             <div className='services-content' onMouseLeave={this.handleDailyFlip}>
-            <h3>Daily Cleaning</h3>
             <ul>
                 <li>Restrooms deep clean</li>
                 <li>Detail kitchen</li>

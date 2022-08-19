@@ -23,10 +23,10 @@ export default class Construction extends Component {
                     
             <div className='services-content' onMouseEnter={this.handleConstructionFlip}>
                 <img className='floor-img' src={Floor} />
+                <h3>Construction Cleaning</h3>                        
             </div>
             
             <div className='services-content' onMouseLeave={this.handleConstructionFlip}>
-                <h3>Construction Cleaning</h3>                        
                 <ul>
                     <li>Restrooms deep clean</li>
                     <li>Detail kitchen</li>
