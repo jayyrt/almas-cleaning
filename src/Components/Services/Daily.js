@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactCardFlip from 'react-card-flip';
+import Windex from './windex.jpg';
 import './Services.css';
 
 export default class Daily extends Component {
@@ -20,7 +21,9 @@ export default class Daily extends Component {
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
             <div className='services-content' onMouseEnter={this.handleDailyFlip}>
-                <img />
+                <div className='windex-img'>
+                <img className='windex' src={Windex}/>
+                </div>
             </div>
             <div className='services-content' onMouseLeave={this.handleDailyFlip}>
             <h3>Daily Cleaning</h3>

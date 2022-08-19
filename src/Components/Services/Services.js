@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactCardFlip from 'react-card-flip';
 import Adrian from './Adrian.jpg';
 import Background from './../Shared/Background/Background';
 import Construction from './Construction';
