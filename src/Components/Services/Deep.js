@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactCardFlip from 'react-card-flip';
+import Kitchen from './kitchen.jpg';
 import './Services.css';
 
 export default class Deep extends Component {
@@ -20,7 +21,7 @@ export default class Deep extends Component {
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     <div className='services-content' onMouseEnter={this.handleDeepFlip}>
-                        <img />
+                        <img className='kitchen' src={Kitchen} />
                     </div>
                     
                     <div className='services-content' onMouseLeave={this.handleDeepFlip}>

@@ -21,8 +21,8 @@ export default class Daily extends Component {
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
             <div className='services-content' onMouseEnter={this.handleDailyFlip}>
-                <div className='windex-img'>
-                <img className='windex' src={Windex}/>
+                <div className='daily-img'>
+                <img className='daily-img' src={Windex}/>
                 </div>
             </div>
             <div className='services-content' onMouseLeave={this.handleDailyFlip}>

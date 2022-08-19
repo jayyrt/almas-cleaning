@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactCardFlip from 'react-card-flip';
+import Floor from './floor.jpg';
 import './Services.css';
 
 export default class Construction extends Component {
@@ -21,7 +22,7 @@ export default class Construction extends Component {
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                     
             <div className='services-content' onMouseEnter={this.handleConstructionFlip}>
-                <img />
+                <img className='floor-img' src={Floor} />
             </div>
             
             <div className='services-content' onMouseLeave={this.handleConstructionFlip}>
