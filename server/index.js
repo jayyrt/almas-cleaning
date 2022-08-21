@@ -4,7 +4,8 @@ const cors = require('cors');
 const session = require('express-session');
 const massive = require('massive');
 const authCtrl = require('./controllers/authControllers');
-const profileCtrl = require('./controllers/profileControllers')
+const profileCtrl = require('./controllers/profileControllers');
+const inquiryCtrl = require('./controllers/inquiriesControllers');
 
 const PORT = 3005;
 
@@ -41,5 +42,7 @@ app.get('/auth/user', authCtrl.getUser, authCtrl.usersOnly)
 //Profile Endpoints
 app.get('/auth/user-info/:id', authCtrl.usersOnly, profileCtrl.getInfo);
 app.post('/auth/user-info/:id', authCtrl.usersOnly, profileCtrl.updateInfo);
+
+app.post('/inquiry', inquiryCtrl.inquiry)
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));
