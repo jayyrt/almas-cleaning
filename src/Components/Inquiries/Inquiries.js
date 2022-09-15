@@ -17,8 +17,8 @@ export default class Inquiries extends Component {
     }
 
     email() {
-        const { email, subject  } = this.state; // missing msg, name, phone
-        axios.post('/inquiry', {  email, subject })
+        const { name, email, phone, subject, msg  } = this.state; // missing msg, name, phone
+        axios.post('/inquiry', { name, email, phone, subject, msg })
         .then((res) => {
             toast.info(`Successfully sent Inquiry`);
         })

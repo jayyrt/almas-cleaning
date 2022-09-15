@@ -28,7 +28,7 @@ module.exports = {
             from: req.body.email,
             to: EMAIL_USERNAME,
             subject: req.body.subject,
-            html: `<div>this is my email!</div>`
+            html: `<div>${req.body.msg}</div>`
         };
 
         transporter.on(inquiryEmail, function (error, info) {
