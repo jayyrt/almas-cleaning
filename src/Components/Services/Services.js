@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Adrian from './Adrian.jpg';
+import vanAlmas from './vanAlmas.jpg';
 import Background from './../Shared/Background/Background';
 import Construction from './Construction';
 import Deep from './Deep';
@@ -30,7 +30,7 @@ export default class Services extends Component {
                 </div>    
 
                     <div className='img-container'>
-                        <img className='adrian' src={Adrian} alt='Team Image' />
+                        <img className='vanAlmas' src={vanAlmas} alt='Team Image' />
                     </div>
                 </ Background>
         );

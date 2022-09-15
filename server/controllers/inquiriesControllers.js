@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-require('dovenv').config();
+require('dotenv').config();
 nodemailer = require('nodemailer');
 const express = require('express');
 const fs = require('fs');
@@ -14,33 +14,30 @@ const app = express();
 app.use(express.json());
 
 module.exports = {
-    inquiry: async (req, res) => {
-        const email = req.body.email;
+    inquiry: (req, res) => {
 
-    const transporter = nodemailer.createTransport({
-        host: 'smtp.mailtrap.io',
-        port: 587,
-        secure: false,
-        auth: {
-            user: EMAIL_USERNAME,
-            pass: EMAIL_PASSWORD,
-        }
-    });
+        const transporter = nodemailer.createTransport({
+            service: 'smtp.mailtrap.io',
+            auth: {
+                user: EMAIL_USERNAME,
+                pass: EMAIL_PASSWORD,
+            }
+        });
 
-    const  inquiryEmail = {
-        from: {}, // get email input
-        to: email,
-        subject: {}, // reference subject input
-        html: `<div>this is my email!</div>`
-    };
+        const inquiryEmail = {
+            from: req.body.email,
+            to: EMAIL_USERNAME,
+            subject: req.body.subject,
+            html: `<div>this is my email!</div>`
+        };
 
-    transporter.sendEmail(inquiryEmail, function(error, info){
-        if (error) {
-            console.log('Mail not sent');
-        } else {
-            console.log('Email sent:' + info.messageId);
-        }
-    })
+        transporter.on(inquiryEmail, function (error, info) {
+            if (error) {
+                console.log('Mail not sent');
+            } else {
+                console.log('Email sent:' + info.messageId);
+            }
+        });
     }
 
 };
