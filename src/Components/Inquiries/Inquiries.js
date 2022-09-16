@@ -17,18 +17,29 @@ export default class Inquiries extends Component {
     }
 
     email() {
-        const { name, email, phone, subject, msg  } = this.state; // missing msg, name, phone
-        axios.post('/inquiry', { name, email, phone, subject, msg })
+        const { name, email, phone, subject, msg  } = this.state;
+        axios.post('/api/inquiry', { name, email, phone, subject, msg })
         .then((res) => {
+                this.resetForm();
             toast.info(`Successfully sent Inquiry`);
         })
         .catch((err) => toast.error(`Inquiry email Error, try again`))
+    }
+
+    resetForm() {
+        this.setState({
+            name: '',
+            email: '',
+            phone: '',
+            msg: ''
+        })
     }
 
     render() {
         const { name, email, phone, subject, msg } = this.state;
         return (
             <div className='inquiries-exterior'>
+                <form onSubmit={this.email}>
                 <ToastContainer />
                 <h2>Ask Us Anything!</h2>
             <div className='inquiries-container'>
@@ -60,8 +71,9 @@ export default class Inquiries extends Component {
                 <textarea className='inquiries-msg' 
                 value={msg}
                 onChange={(e) => this.setState({ msg: e.target.value })}></textarea>
-                <button onClick={this.email}>Submit Inquiry</button>
+                <button type='submit'>Submit Inquiry</button>
             </div>
+            </form>
             </div>
         )
     }

@@ -2,12 +2,15 @@
   "name": "almas-cleaning",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4005",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.23.0",
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "concurrently": "^7.4.0",
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.3",
@@ -30,9 +33,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "nodemon index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "concurrently \" npm run server\" \"npm run almas-cleaning\""
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +57,5 @@
       "last 1 safari version"
     ]
   },
-  "main": "server/index.js",
-  "proxy": "http://localhost:3005"
+  "main": "server/index.js"
 }
